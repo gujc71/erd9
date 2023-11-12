@@ -2,7 +2,8 @@
 ERD9 is a database modeling tool that you use to easily and visually manage your database structure.
 It defines tables (Entities), and easily visualize and manage relationships between tables (ERD - Entity Relationship Diagram).
 
-<br/><br/>
+
+[Getting started](https://gujc71.github.io/erd9/)
 
 ## Main features
 
