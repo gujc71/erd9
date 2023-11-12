@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<link rel="stylesheet" type="text/css" href="erd9.css">
+	<script src="https://d3js.org/d3.v7.min.js"></script>
+	<script src="erd9.min.js"></script>
+	<!-- <script src="testData.js"></script> -->
+	<title>ERD9 - Best Databse Modeling Tool</title>
+</head>
+<body style="stroke-width: 0px; background-color:white">
+	<div width="99%" height="30" class="toolbar">
+		<div class="logo">&nbsp;</div>
+
+		<div style="position: relative;   display: inline-block;">
+			<div class="filename" id ="filename">no name</div>
+			
+			<div class="toolbarFunction">
+				<div class="dropdown">
+					<button class="dropbtn">Files</button>
+					<div class="dropdown-content">
+						<a id="newDocument">New</a>
+						<a id="saveFile">Save</a>
+						<a id="openFile">Open</a>
+						<a id="exportFile">Export</a>
+						<a id="importFile">Import</a>
+					</div>
+				</div>
+
+				<button id="arrowBtn" class="toggle-diagram active" style="margin-left:30px"> Arrow </button>
+				<button id="textBtn" class="toggle-diagram"> Text </button>
+				<button id="entityBtn" class="toggle-diagram"> Entity </button>
+				<button id="relationPKBtn" class="toggle-diagram"> PK</button>
+				<button id="relationAKBtn" class="toggle-diagram"> AK</button>
+				
+				<button id="logicalBtn" class="toggle-view-mode active" style="margin-left:30px"> Logical </button>
+				<button id="physicalBtn" class="toggle-view-mode"> Physical </button>
+
+				<div class="dropdown" style="margin-left:30px">
+					<button id="dbmsDropbtn" class="dropbtn">MariaDB</button>
+					<div class="dropdown-content">
+						<a id="dbms4mariadb">MariaDB</a>
+						<a id="dbms4oracle">ORACLE</a>
+						<a id="dbms4mssql">MS-SQL</a>
+					</div>
+				</div>		
+				<div class="dropdown" style="margin-left:30px; width: 200px;">
+					<button class="dropbtn">Add-ons</button>
+					<div class="dropdown-content">
+						<a id="simpleImportDDL">Simple Import from DDL</a>
+						<a id="generateDDL">Generate DDL</a>
+						<a id="tableDescription">Table Description</a>
+					</div>
+				</div>		
+			</div>
+		</div>
+	</div>
+
+	<svg width="5555" height="5555" transform="translate(0, 68) scale(1)"></svg>
+</body>
+
+</html>
