@@ -8,7 +8,11 @@ It defines tables (Entities), and easily visualize and manage relationships betw
 
 ERD9 enables you to easily create and manage entities using the mouse, as shown in the following figure.
 
+![manual1](https://gujc71.github.io/erd9/manual_1.gif)
+
 It supports three popular DBMS used in development, such as Oracle, MS-SQL, and MariaDB, and relationships between entities can be configured as One to Many using only PK and AK.
+
+![manual2](https://gujc71.github.io/erd9/manual_2.gif)
 
 By default, the created ERD document is stored in the working browser's storage (IndexedDB), but you can also save it on your PC using the 'Export' feature (Be careful when using in public).
 It doesn't store any data on the server, and it doesn't log in.
@@ -19,6 +23,8 @@ If you encounter any issues while using ERD9, please leave a detailed descriptio
 - Simple import from DDL: Extract table information from DDL(Data Definition Language) to create an ERD. Only simple and structured SQL statements can be processed.
 - Generate DDL: Generate DDL based on the created ERD information. You can copy and use this SQL statement.
 - Table Desciption: Generate a table desciption based on the ERD information you created.
+
+![manual3](https://gujc71.github.io/erd9/manual_3.gif)
 
 <br/><br/>
 ## Near future
