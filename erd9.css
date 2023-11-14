@@ -30,6 +30,7 @@ svg {
   background-color:#9ef1ede0;
   padding: 5px; 
   z-index:1;
+  min-width: 1300px;
 }
 
 .toolbarFunction {
