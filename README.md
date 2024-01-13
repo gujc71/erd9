@@ -1,16 +1,20 @@
 ERD9 is a database modeling tool that you use to easily and visually manage your database structure.
 It defines tables (Entities), and easily visualize and manage relationships between tables (ERD - Entity Relationship Diagram).
 
--- ERD tools are an essential part of database-driven software development. If you don't use ERD tools, you're likely forgoing the easy path and choosing the difficult one. However, (installed) commercial products are too expensive, and free or cheap web-based tools either offer ERD as an additional feature with diagramming tools or slow or basic modeling tools.
-ERD9 is a specialized tool for database modeling (ERD) that is fast and easy to use, and it is currently implementing various data modeling features (At least, that's the intent)  
+ERD9 is currently only tested in the Chrome and Firefox web browsers on Windows.
 
+[Getting started](https://gujc71.github.io/erd9/)
 <br/><br/>
 
 ## Main features
 
 ERD9 enables you to easily create and manage entities using the mouse, as shown in the following figure.
 
+![manual1](https://gujc71.github.io/erd9/images/manual_1.gif)
+
 It supports three popular DBMS used in development, such as Oracle, MS-SQL, and MariaDB, and relationships between entities can be configured as One to Many using only PK and AK.
+
+![manual2](https://gujc71.github.io/erd9/images/manual_2.gif)
 
 By default, the created ERD document is stored in the working browser's storage (IndexedDB), but you can also save it on your PC using the 'Export' feature (Be careful when using in public).
 It doesn't store any data on the server, and it doesn't log in.
@@ -22,11 +26,13 @@ If you encounter any issues while using ERD9, please leave a detailed descriptio
 - Generate DDL: Generate DDL based on the created ERD information. You can copy and use this SQL statement.
 - Table Desciption: Generate a table desciption based on the ERD information you created.
 
+![manual3](https://gujc71.github.io/erd9/images/manual_3.gif)
+
 <br/><br/>
 ## Near future
 It seems like some aesthetic design enhancements and dynamic functionalities need to be added. I'm considering animation effects where entities shrink and disappear when deleted, or where related relationships are highlighted when an entity is selected.
 - One to One Relationship
-- Find Entity
+- ~~Find Entity~~
 - ~~Zoom In / Out~~
 - Printer output
 - ~~Multiple Selection: Select multiple entities to move or delete.~~
