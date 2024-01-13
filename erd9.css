@@ -20,14 +20,20 @@ html, body {
 svg {
   width:5555px;
   height:5555px;
+	user-select: none; 
 }
+
+text {
+  cursor: default;
+}
+
 /* toolbar */	
 .toolbar{
   position: fixed;
   top: 0px;
   width: 99%;
   height: 58px;
-  background-color:#9ef1ede0;
+  background-color:#d3e3fd;
   padding: 5px; 
   z-index:1;
   min-width: 1300px;
@@ -91,12 +97,32 @@ svg {
   display: block;
 }
 
-/* svg */	
-svg {
-	user-select: none; 
+.selectRect {
+  fill: transparent;
+  stroke: gray;
+  cursor: default;
+  stroke-width: 1;
 }
-text {
-      cursor: default;
+
+
+.findEntityDiv {
+  position: fixed;
+  top: 5px;
+  right: 50px;
+  transition: width 1s;
+  width: 30px;
+  overflow: hidden;
+  height: 21px;
+}
+
+.findEntityDiv input{
+  border: 0px;
+  width: 120px;
+  height: 19px;
+}
+
+.findEntityDiv.expanded{
+  width: 220px;
 }
 
 /* Popup Dialog*/	
@@ -186,7 +212,7 @@ text {
 }
 .erd9Dialog-grid td, .tab-logger td {
   border: 1px solid black;
-  _height: 25px;
+  height: 19px;
   padding: 2px;
   white-space: nowrap; 
   overflow: hidden;
@@ -338,6 +364,10 @@ cursor: pointer;
 .log-error {
   color: #007BFF;
 }
+
+.hide {
+  display: none;
+}	
 
 .loading-screen {
   position: fixed;
