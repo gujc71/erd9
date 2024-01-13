@@ -1,0 +1,1177 @@
+{
+  "dbms": "mariadb",
+  "entityData": {
+    "er17051542013602698": {
+      "x1": 335,
+      "y1": 775,
+      "x2": 511.92626953125,
+      "y2": 910,
+      "data": {
+        "physicalName": "ACTOR",
+        "keys": [
+          {
+            "id": "17051542012422490",
+            "isPK": true,
+            "nullable": false,
+            "column": "ACTOR_ID",
+            "dataType": "SMALLINT",
+            "defaultValue": "AUTO_INCREMENT",
+            "parent": "FILM_ACTOR",
+            "parentID": "17051542013217122"
+          }
+        ],
+        "fields": [
+          {
+            "id": "17051542012422449",
+            "isPK": false,
+            "nullable": false,
+            "column": "FIRST_NAME",
+            "dataType": "VARCHAR(45)"
+          },
+          {
+            "id": "17051542012421787",
+            "isPK": false,
+            "nullable": false,
+            "column": "LAST_NAME",
+            "dataType": "VARCHAR(45)"
+          },
+          {
+            "id": "17051542012425529",
+            "isPK": false,
+            "nullable": false,
+            "column": "LAST_UPDATE",
+            "dataType": "TIMESTAMP",
+            "defaultValue": "CURRENT_TIMESTAMP"
+          },
+          {
+            "id": "17051542012429227",
+            "isPK": false,
+            "nullable": true,
+            "column": "KEY",
+            "dataType": "IDX_ACTOR_LAST_NAME"
+          }
+        ],
+        "allFields": [
+          {
+            "id": "17051542012422490",
+            "isPK": true,
+            "nullable": false,
+            "column": "ACTOR_ID",
+            "dataType": "SMALLINT",
+            "defaultValue": "AUTO_INCREMENT",
+            "parent": "FILM_ACTOR",
+            "parentID": "17051542013217122"
+          },
+          {
+            "id": "17051542012422449",
+            "isPK": false,
+            "nullable": false,
+            "column": "FIRST_NAME",
+            "dataType": "VARCHAR(45)"
+          },
+          {
+            "id": "17051542012421787",
+            "isPK": false,
+            "nullable": false,
+            "column": "LAST_NAME",
+            "dataType": "VARCHAR(45)"
+          },
+          {
+            "id": "17051542012425529",
+            "isPK": false,
+            "nullable": false,
+            "column": "LAST_UPDATE",
+            "dataType": "TIMESTAMP",
+            "defaultValue": "CURRENT_TIMESTAMP"
+          },
+          {
+            "id": "17051542012429227",
+            "isPK": false,
+            "nullable": true,
+            "column": "KEY",
+            "dataType": "IDX_ACTOR_LAST_NAME"
+          }
+        ]
+      }
+    },
+    "er17051542013672530": {
+      "x1": 314,
+      "y1": 520,
+      "x2": 487.5224609375,
+      "y2": 715,
+      "data": {
+        "physicalName": "ADDRESS",
+        "keys": [
+          {
+            "id": "17051542012543440",
+            "isPK": true,
+            "nullable": false,
+            "column": "ADDRESS_ID",
+            "dataType": "SMALLINT",
+            "defaultValue": "AUTO_INCREMENT",
+            "parent": "CUSTOMER",
+            "parentID": "17051542012985515"
+          }
+        ],
+        "fields": [
+          {
+            "id": "17051542012542045",
+            "isPK": false,
+            "nullable": false,
+            "column": "ADDRESS",
+            "dataType": "VARCHAR(50)"
+          },
+          {
+            "id": "17051542012541733",
+            "isPK": false,
+            "nullable": true,
+            "column": "ADDRESS2",
+            "dataType": "VARCHAR(50)",
+            "defaultValue": "NULL"
+          },
+          {
+            "id": "17051542012541809",
+            "isPK": false,
+            "nullable": false,
+            "column": "DISTRICT",
+            "dataType": "VARCHAR(20)"
+          },
+          {
+            "id": "17051542012549042",
+            "isPK": false,
+            "nullable": false,
+            "column": "CITY_ID",
+            "dataType": "SMALLINT"
+          },
+          {
+            "id": "17051542012549332",
+            "isPK": false,
+            "nullable": true,
+            "column": "POSTAL_CODE",
+            "dataType": "VARCHAR(10)",
+            "defaultValue": "NULL"
+          },
+          {
+            "id": "17051542012544445",
+            "isPK": false,
+            "nullable": false,
+            "column": "PHONE",
+            "dataType": "VARCHAR(20)"
+          },
+          {
+            "id": "17051542012546562",
+            "isPK": false,
+            "nullable": false,
+            "column": "LAST_UPDATE",
+            "dataType": "TIMESTAMP",
+            "defaultValue": "CURRENT_TIMESTAMP"
+          },
+          {
+            "id": "17051542012547121",
+            "isPK": false,
+            "nullable": true,
+            "column": "KEY",
+            "dataType": "IDX_FK_CITY_ID"
+          }
+        ],
+        "allFields": [
+          {
+            "id": "17051542012543440",
+            "isPK": true,
+            "nullable": false,
+            "column": "ADDRESS_ID",
+            "dataType": "SMALLINT",
+            "defaultValue": "AUTO_INCREMENT",
+            "parent": "CUSTOMER",
+            "parentID": "17051542012985515"
+          },
+          {
+            "id": "17051542012542045",
+            "isPK": false,
+            "nullable": false,
+            "column": "ADDRESS",
+            "dataType": "VARCHAR(50)"
+          },
+          {
+            "id": "17051542012541733",
+            "isPK": false,
+            "nullable": true,
+            "column": "ADDRESS2",
+            "dataType": "VARCHAR(50)",
+            "defaultValue": "NULL"
+          },
+          {
+            "id": "17051542012541809",
+            "isPK": false,
+            "nullable": false,
+            "column": "DISTRICT",
+            "dataType": "VARCHAR(20)"
+          },
+          {
+            "id": "17051542012549042",
+            "isPK": false,
+            "nullable": false,
+            "column": "CITY_ID",
+            "dataType": "SMALLINT"
+          },
+          {
+            "id": "17051542012549332",
+            "isPK": false,
+            "nullable": true,
+            "column": "POSTAL_CODE",
+            "dataType": "VARCHAR(10)",
+            "defaultValue": "NULL"
+          },
+          {
+            "id": "17051542012544445",
+            "isPK": false,
+            "nullable": false,
+            "column": "PHONE",
+            "dataType": "VARCHAR(20)"
+          },
+          {
+            "id": "17051542012546562",
+            "isPK": false,
+            "nullable": false,
+            "column": "LAST_UPDATE",
+            "dataType": "TIMESTAMP",
+            "defaultValue": "CURRENT_TIMESTAMP"
+          },
+          {
+            "id": "17051542012547121",
+            "isPK": false,
+            "nullable": true,
+            "column": "KEY",
+            "dataType": "IDX_FK_CITY_ID"
+          }
+        ]
+      }
+    },
+    "er17051542013736906": {
+      "x1": 580,
+      "y1": 49,
+      "x2": 744.296875,
+      "y2": 184,
+      "data": {
+        "physicalName": "CATEGORY",
+        "keys": [
+          {
+            "id": "17051542012652309",
+            "isPK": true,
+            "nullable": false,
+            "column": "CATEGORY_ID",
+            "dataType": "TINYINT",
+            "defaultValue": "AUTO_INCREMENT",
+            "parent": "FILM_CATEGORY",
+            "parentID": "17051542013322443"
+          }
+        ],
+        "fields": [
+          {
+            "id": "17051542012669992",
+            "isPK": false,
+            "nullable": false,
+            "column": "NAME",
+            "dataType": "VARCHAR(25)"
+          },
+          {
+            "id": "1705154201266185",
+            "isPK": false,
+            "nullable": false,
+            "column": "LAST_UPDATE",
+            "dataType": "TIMESTAMP",
+            "defaultValue": "CURRENT_TIMESTAMP"
+          }
+        ],
+        "allFields": [
+          {
+            "id": "17051542012652309",
+            "isPK": true,
+            "nullable": false,
+            "column": "CATEGORY_ID",
+            "dataType": "TINYINT",
+            "defaultValue": "AUTO_INCREMENT",
+            "parent": "FILM_CATEGORY",
+            "parentID": "17051542013322443"
+          },
+          {
+            "id": "17051542012669992",
+            "isPK": false,
+            "nullable": false,
+            "column": "NAME",
+            "dataType": "VARCHAR(25)"
+          },
+          {
+            "id": "1705154201266185",
+            "isPK": false,
+            "nullable": false,
+            "column": "LAST_UPDATE",
+            "dataType": "TIMESTAMP",
+            "defaultValue": "CURRENT_TIMESTAMP"
+          }
+        ]
+      }
+    },
+    "er17051542013791621": {
+      "x1": 66,
+      "y1": 438,
+      "x2": 226.41455078125,
+      "y2": 573,
+      "data": {
+        "physicalName": "CITY",
+        "keys": [
+          {
+            "id": "17051542012767943",
+            "isPK": true,
+            "nullable": false,
+            "column": "CITY_ID",
+            "dataType": "SMALLINT",
+            "defaultValue": "AUTO_INCREMENT",
+            "parent": "ADDRESS",
+            "parentID": "17051542012549042"
+          }
+        ],
+        "fields": [
+          {
+            "id": "17051542012762414",
+            "isPK": false,
+            "nullable": false,
+            "column": "CITY",
+            "dataType": "VARCHAR(50)"
+          },
+          {
+            "id": "17051542012764052",
+            "isPK": false,
+            "nullable": false,
+            "column": "COUNTRY_ID",
+            "dataType": "SMALLINT"
+          },
+          {
+            "id": "17051542012762337",
+            "isPK": false,
+            "nullable": false,
+            "column": "LAST_UPDATE",
+            "dataType": "TIMESTAMP",
+            "defaultValue": "CURRENT_TIMESTAMP"
+          },
+          {
+            "id": "17051542012764221",
+            "isPK": false,
+            "nullable": true,
+            "column": "KEY",
+            "dataType": "IDX_FK_COUNTRY_ID"
+          }
+        ],
+        "allFields": [
+          {
+            "id": "17051542012767943",
+            "isPK": true,
+            "nullable": false,
+            "column": "CITY_ID",
+            "dataType": "SMALLINT",
+            "defaultValue": "AUTO_INCREMENT",
+            "parent": "ADDRESS",
+            "parentID": "17051542012549042"
+          },
+          {
+            "id": "17051542012762414",
+            "isPK": false,
+            "nullable": false,
+            "column": "CITY",
+            "dataType": "VARCHAR(50)"
+          },
+          {
+            "id": "17051542012764052",
+            "isPK": false,
+            "nullable": false,
+            "column": "COUNTRY_ID",
+            "dataType": "SMALLINT"
+          },
+          {
+            "id": "17051542012762337",
+            "isPK": false,
+            "nullable": false,
+            "column": "LAST_UPDATE",
+            "dataType": "TIMESTAMP",
+            "defaultValue": "CURRENT_TIMESTAMP"
+          },
+          {
+            "id": "17051542012764221",
+            "isPK": false,
+            "nullable": true,
+            "column": "KEY",
+            "dataType": "IDX_FK_COUNTRY_ID"
+          }
+        ]
+      }
+    },
+    "er17051542013864285": {
+      "x1": 56,
+      "y1": 672,
+      "x2": 224.98583984375,
+      "y2": 807,
+      "data": {
+        "physicalName": "COUNTRY",
+        "keys": [
+          {
+            "id": "17051542012877841",
+            "isPK": true,
+            "nullable": false,
+            "column": "COUNTRY_ID",
+            "dataType": "SMALLINT",
+            "defaultValue": "AUTO_INCREMENT",
+            "parent": "CITY",
+            "parentID": "17051542012764052"
+          }
+        ],
+        "fields": [
+          {
+            "id": "17051542012875192",
+            "isPK": false,
+            "nullable": false,
+            "column": "COUNTRY",
+            "dataType": "VARCHAR(50)"
+          },
+          {
+            "id": "17051542012877650",
+            "isPK": false,
+            "nullable": false,
+            "column": "LAST_UPDATE",
+            "dataType": "TIMESTAMP",
+            "defaultValue": "CURRENT_TIMESTAMP"
+          }
+        ],
+        "allFields": [
+          {
+            "id": "17051542012877841",
+            "isPK": true,
+            "nullable": false,
+            "column": "COUNTRY_ID",
+            "dataType": "SMALLINT",
+            "defaultValue": "AUTO_INCREMENT",
+            "parent": "CITY",
+            "parentID": "17051542012764052"
+          },
+          {
+            "id": "17051542012875192",
+            "isPK": false,
+            "nullable": false,
+            "column": "COUNTRY",
+            "dataType": "VARCHAR(50)"
+          },
+          {
+            "id": "17051542012877650",
+            "isPK": false,
+            "nullable": false,
+            "column": "LAST_UPDATE",
+            "dataType": "TIMESTAMP",
+            "defaultValue": "CURRENT_TIMESTAMP"
+          }
+        ]
+      }
+    },
+    "er17051542013934506": {
+      "x1": 289,
+      "y1": 113,
+      "x2": 450.71044921875,
+      "y2": 368,
+      "data": {
+        "physicalName": "CUSTOMER",
+        "keys": [
+          {
+            "id": "17051542012989036",
+            "isPK": true,
+            "nullable": false,
+            "column": "CUSTOMER_ID",
+            "dataType": "SMALLINT",
+            "defaultValue": "AUTO_INCREMENT"
+          }
+        ],
+        "fields": [
+          {
+            "id": "17051542012985252",
+            "isPK": false,
+            "nullable": false,
+            "column": "STORE_ID",
+            "dataType": "TINYINT"
+          },
+          {
+            "id": "17051542012983211",
+            "isPK": false,
+            "nullable": false,
+            "column": "FIRST_NAME",
+            "dataType": "VARCHAR(45)"
+          },
+          {
+            "id": "17051542012983191",
+            "isPK": false,
+            "nullable": false,
+            "column": "LAST_NAME",
+            "dataType": "VARCHAR(45)"
+          },
+          {
+            "id": "17051542012989493",
+            "isPK": false,
+            "nullable": true,
+            "column": "EMAIL",
+            "dataType": "VARCHAR(50)",
+            "defaultValue": "NULL"
+          },
+          {
+            "id": "17051542012985515",
+            "isPK": false,
+            "nullable": false,
+            "column": "ADDRESS_ID",
+            "dataType": "SMALLINT"
+          },
+          {
+            "id": "17051542012984917",
+            "isPK": false,
+            "nullable": false,
+            "column": "ACTIVE",
+            "dataType": "BOOLEAN",
+            "defaultValue": "TRUE"
+          },
+          {
+            "id": "17051542012982224",
+            "isPK": false,
+            "nullable": false,
+            "column": "CREATE_DATE",
+            "dataType": "DATETIME"
+          },
+          {
+            "id": "1705154201298982",
+            "isPK": false,
+            "nullable": true,
+            "column": "LAST_UPDATE",
+            "dataType": "TIMESTAMP",
+            "defaultValue": "CURRENT_TIMESTAMP"
+          },
+          {
+            "id": "17051542012983981",
+            "isPK": false,
+            "nullable": true,
+            "column": "KEY",
+            "dataType": "IDX_FK_STORE_ID"
+          },
+          {
+            "id": "17051542012985920",
+            "isPK": false,
+            "nullable": true,
+            "column": "KEY",
+            "dataType": "IDX_FK_ADDRESS_ID"
+          },
+          {
+            "id": "17051542012985353",
+            "isPK": false,
+            "nullable": true,
+            "column": "KEY",
+            "dataType": "IDX_LAST_NAME"
+          }
+        ],
+        "allFields": [
+          {
+            "id": "17051542012989036",
+            "isPK": true,
+            "nullable": false,
+            "column": "CUSTOMER_ID",
+            "dataType": "SMALLINT",
+            "defaultValue": "AUTO_INCREMENT"
+          },
+          {
+            "id": "17051542012985252",
+            "isPK": false,
+            "nullable": false,
+            "column": "STORE_ID",
+            "dataType": "TINYINT"
+          },
+          {
+            "id": "17051542012983211",
+            "isPK": false,
+            "nullable": false,
+            "column": "FIRST_NAME",
+            "dataType": "VARCHAR(45)"
+          },
+          {
+            "id": "17051542012983191",
+            "isPK": false,
+            "nullable": false,
+            "column": "LAST_NAME",
+            "dataType": "VARCHAR(45)"
+          },
+          {
+            "id": "17051542012989493",
+            "isPK": false,
+            "nullable": true,
+            "column": "EMAIL",
+            "dataType": "VARCHAR(50)",
+            "defaultValue": "NULL"
+          },
+          {
+            "id": "17051542012985515",
+            "isPK": false,
+            "nullable": false,
+            "column": "ADDRESS_ID",
+            "dataType": "SMALLINT"
+          },
+          {
+            "id": "17051542012984917",
+            "isPK": false,
+            "nullable": false,
+            "column": "ACTIVE",
+            "dataType": "BOOLEAN",
+            "defaultValue": "TRUE"
+          },
+          {
+            "id": "17051542012982224",
+            "isPK": false,
+            "nullable": false,
+            "column": "CREATE_DATE",
+            "dataType": "DATETIME"
+          },
+          {
+            "id": "1705154201298982",
+            "isPK": false,
+            "nullable": true,
+            "column": "LAST_UPDATE",
+            "dataType": "TIMESTAMP",
+            "defaultValue": "CURRENT_TIMESTAMP"
+          },
+          {
+            "id": "17051542012983981",
+            "isPK": false,
+            "nullable": true,
+            "column": "KEY",
+            "dataType": "IDX_FK_STORE_ID"
+          },
+          {
+            "id": "17051542012985920",
+            "isPK": false,
+            "nullable": true,
+            "column": "KEY",
+            "dataType": "IDX_FK_ADDRESS_ID"
+          },
+          {
+            "id": "17051542012985353",
+            "isPK": false,
+            "nullable": true,
+            "column": "KEY",
+            "dataType": "IDX_LAST_NAME"
+          }
+        ]
+      }
+    },
+    "er17051542013997325": {
+      "x1": 542,
+      "y1": 238,
+      "x2": 764.595703125,
+      "y2": 573,
+      "data": {
+        "physicalName": "FILM",
+        "keys": [
+          {
+            "id": "17051542013093418",
+            "isPK": true,
+            "nullable": false,
+            "column": "FILM_ID",
+            "dataType": "SMALLINT",
+            "defaultValue": "AUTO_INCREMENT",
+            "parent": "FILM_CATEGORY",
+            "parentID": "17051542013328739"
+          }
+        ],
+        "fields": [
+          {
+            "id": "17051542013094512",
+            "isPK": false,
+            "nullable": false,
+            "column": "TITLE",
+            "dataType": "VARCHAR(255)"
+          },
+          {
+            "id": "17051542013096268",
+            "isPK": false,
+            "nullable": true,
+            "column": "DESCRIPTION",
+            "dataType": "TEXT",
+            "defaultValue": "NULL"
+          },
+          {
+            "id": "17051542013099468",
+            "isPK": false,
+            "nullable": true,
+            "column": "RELEASE_YEAR",
+            "dataType": "YEAR",
+            "defaultValue": "NULL"
+          },
+          {
+            "id": "17051542013091807",
+            "isPK": false,
+            "nullable": false,
+            "column": "LANGUAGE_ID",
+            "dataType": "TINYINT"
+          },
+          {
+            "id": "17051542013091009",
+            "isPK": false,
+            "nullable": true,
+            "column": "ORIGINAL_LANGUAGE_ID",
+            "dataType": "TINYINT",
+            "defaultValue": "NULL"
+          },
+          {
+            "id": "17051542013092353",
+            "isPK": false,
+            "nullable": false,
+            "column": "RENTAL_DURATION",
+            "dataType": "TINYINT",
+            "defaultValue": "3"
+          },
+          {
+            "id": "17051542013095046",
+            "isPK": false,
+            "nullable": false,
+            "column": "RENTAL_RATE",
+            "dataType": "DECIMAL(4,2)",
+            "defaultValue": "4.99"
+          },
+          {
+            "id": "17051542013093050",
+            "isPK": false,
+            "nullable": true,
+            "column": "LENGTH",
+            "dataType": "SMALLINT",
+            "defaultValue": "NULL"
+          },
+          {
+            "id": "17051542013091200",
+            "isPK": false,
+            "nullable": false,
+            "column": "REPLACEMENT_COST",
+            "dataType": "DECIMAL(5,2)",
+            "defaultValue": "19.99"
+          },
+          {
+            "id": "17051542013099966",
+            "isPK": false,
+            "nullable": true,
+            "column": "RATING",
+            "dataType": "ENUM('G',",
+            "defaultValue": "'G'"
+          },
+          {
+            "id": "17051542013091724",
+            "isPK": false,
+            "nullable": true,
+            "column": "SPECIAL_FEATURES",
+            "dataType": "SET('TRAILERS',",
+            "defaultValue": "NULL"
+          },
+          {
+            "id": "17051542013093680",
+            "isPK": false,
+            "nullable": false,
+            "column": "LAST_UPDATE",
+            "dataType": "TIMESTAMP",
+            "defaultValue": "CURRENT_TIMESTAMP"
+          },
+          {
+            "id": "17051542013098423",
+            "isPK": false,
+            "nullable": true,
+            "column": "KEY",
+            "dataType": "IDX_TITLE"
+          },
+          {
+            "id": "17051542013092476",
+            "isPK": false,
+            "nullable": true,
+            "column": "KEY",
+            "dataType": "IDX_FK_LANGUAGE_ID"
+          },
+          {
+            "id": "17051542013096869",
+            "isPK": false,
+            "nullable": true,
+            "column": "KEY",
+            "dataType": "IDX_FK_ORIGINAL_LANGUAGE_ID"
+          }
+        ],
+        "allFields": [
+          {
+            "id": "17051542013093418",
+            "isPK": true,
+            "nullable": false,
+            "column": "FILM_ID",
+            "dataType": "SMALLINT",
+            "defaultValue": "AUTO_INCREMENT",
+            "parent": "FILM_CATEGORY",
+            "parentID": "17051542013328739"
+          },
+          {
+            "id": "17051542013094512",
+            "isPK": false,
+            "nullable": false,
+            "column": "TITLE",
+            "dataType": "VARCHAR(255)"
+          },
+          {
+            "id": "17051542013096268",
+            "isPK": false,
+            "nullable": true,
+            "column": "DESCRIPTION",
+            "dataType": "TEXT",
+            "defaultValue": "NULL"
+          },
+          {
+            "id": "17051542013099468",
+            "isPK": false,
+            "nullable": true,
+            "column": "RELEASE_YEAR",
+            "dataType": "YEAR",
+            "defaultValue": "NULL"
+          },
+          {
+            "id": "17051542013091807",
+            "isPK": false,
+            "nullable": false,
+            "column": "LANGUAGE_ID",
+            "dataType": "TINYINT"
+          },
+          {
+            "id": "17051542013091009",
+            "isPK": false,
+            "nullable": true,
+            "column": "ORIGINAL_LANGUAGE_ID",
+            "dataType": "TINYINT",
+            "defaultValue": "NULL"
+          },
+          {
+            "id": "17051542013092353",
+            "isPK": false,
+            "nullable": false,
+            "column": "RENTAL_DURATION",
+            "dataType": "TINYINT",
+            "defaultValue": "3"
+          },
+          {
+            "id": "17051542013095046",
+            "isPK": false,
+            "nullable": false,
+            "column": "RENTAL_RATE",
+            "dataType": "DECIMAL(4,2)",
+            "defaultValue": "4.99"
+          },
+          {
+            "id": "17051542013093050",
+            "isPK": false,
+            "nullable": true,
+            "column": "LENGTH",
+            "dataType": "SMALLINT",
+            "defaultValue": "NULL"
+          },
+          {
+            "id": "17051542013091200",
+            "isPK": false,
+            "nullable": false,
+            "column": "REPLACEMENT_COST",
+            "dataType": "DECIMAL(5,2)",
+            "defaultValue": "19.99"
+          },
+          {
+            "id": "17051542013099966",
+            "isPK": false,
+            "nullable": true,
+            "column": "RATING",
+            "dataType": "ENUM('G',",
+            "defaultValue": "'G'"
+          },
+          {
+            "id": "17051542013091724",
+            "isPK": false,
+            "nullable": true,
+            "column": "SPECIAL_FEATURES",
+            "dataType": "SET('TRAILERS',",
+            "defaultValue": "NULL"
+          },
+          {
+            "id": "17051542013093680",
+            "isPK": false,
+            "nullable": false,
+            "column": "LAST_UPDATE",
+            "dataType": "TIMESTAMP",
+            "defaultValue": "CURRENT_TIMESTAMP"
+          },
+          {
+            "id": "17051542013098423",
+            "isPK": false,
+            "nullable": true,
+            "column": "KEY",
+            "dataType": "IDX_TITLE"
+          },
+          {
+            "id": "17051542013092476",
+            "isPK": false,
+            "nullable": true,
+            "column": "KEY",
+            "dataType": "IDX_FK_LANGUAGE_ID"
+          },
+          {
+            "id": "17051542013096869",
+            "isPK": false,
+            "nullable": true,
+            "column": "KEY",
+            "dataType": "IDX_FK_ORIGINAL_LANGUAGE_ID"
+          }
+        ]
+      }
+    },
+    "er17051542014066240": {
+      "x1": 640.98681640625,
+      "y1": 753,
+      "x2": 801.4013671875,
+      "y2": 908,
+      "data": {
+        "physicalName": "FILM_ACTOR",
+        "keys": [
+          {
+            "id": "17051542013217122",
+            "isPK": true,
+            "nullable": false,
+            "column": "ACTOR_ID",
+            "dataType": "SMALLINT"
+          },
+          {
+            "id": "17051542013217555",
+            "isPK": true,
+            "nullable": false,
+            "column": "FILM_ID",
+            "dataType": "SMALLINT"
+          }
+        ],
+        "fields": [
+          {
+            "id": "17051542013212609",
+            "isPK": false,
+            "nullable": false,
+            "column": "LAST_UPDATE",
+            "dataType": "TIMESTAMP",
+            "defaultValue": "CURRENT_TIMESTAMP"
+          },
+          {
+            "id": "17051542013217873",
+            "isPK": false,
+            "nullable": true,
+            "column": "KEY",
+            "dataType": "IDX_FK_FILM_ID"
+          }
+        ],
+        "allFields": [
+          {
+            "id": "17051542013217122",
+            "isPK": true,
+            "nullable": false,
+            "column": "ACTOR_ID",
+            "dataType": "SMALLINT"
+          },
+          {
+            "id": "17051542013217555",
+            "isPK": true,
+            "nullable": false,
+            "column": "FILM_ID",
+            "dataType": "SMALLINT"
+          },
+          {
+            "id": "17051542013212609",
+            "isPK": false,
+            "nullable": false,
+            "column": "LAST_UPDATE",
+            "dataType": "TIMESTAMP",
+            "defaultValue": "CURRENT_TIMESTAMP"
+          },
+          {
+            "id": "17051542013217873",
+            "isPK": false,
+            "nullable": true,
+            "column": "KEY",
+            "dataType": "IDX_FK_FILM_ID"
+          }
+        ]
+      }
+    },
+    "er17051542014123107": {
+      "x1": 908.98681640625,
+      "y1": 251,
+      "x2": 1069.4013671875,
+      "y2": 406,
+      "data": {
+        "physicalName": "FILM_CATEGORY",
+        "keys": [
+          {
+            "id": "17051542013328739",
+            "isPK": true,
+            "nullable": false,
+            "column": "FILM_ID",
+            "dataType": "SMALLINT"
+          },
+          {
+            "id": "17051542013322443",
+            "isPK": true,
+            "nullable": false,
+            "column": "CATEGORY_ID",
+            "dataType": "TINYINT"
+          }
+        ],
+        "fields": [
+          {
+            "id": "17051542013329034",
+            "isPK": false,
+            "nullable": false,
+            "column": "LAST_UPDATE",
+            "dataType": "TIMESTAMP",
+            "defaultValue": "CURRENT_TIMESTAMP"
+          }
+        ],
+        "allFields": [
+          {
+            "id": "17051542013328739",
+            "isPK": true,
+            "nullable": false,
+            "column": "FILM_ID",
+            "dataType": "SMALLINT"
+          },
+          {
+            "id": "17051542013322443",
+            "isPK": true,
+            "nullable": false,
+            "column": "CATEGORY_ID",
+            "dataType": "TINYINT"
+          },
+          {
+            "id": "17051542013329034",
+            "isPK": false,
+            "nullable": false,
+            "column": "LAST_UPDATE",
+            "dataType": "TIMESTAMP",
+            "defaultValue": "CURRENT_TIMESTAMP"
+          }
+        ]
+      }
+    },
+    "er1705154201418533": {
+      "x1": 90,
+      "y1": 234,
+      "x2": 218.103515625,
+      "y2": 369,
+      "data": {
+        "physicalName": "FILM_TEXT",
+        "keys": [
+          {
+            "id": "17051542013432630",
+            "isPK": true,
+            "nullable": false,
+            "column": "FILM_ID",
+            "dataType": "SMALLINT"
+          }
+        ],
+        "fields": [
+          {
+            "id": "17051542013431075",
+            "isPK": false,
+            "nullable": false,
+            "column": "TITLE",
+            "dataType": "VARCHAR(255)"
+          },
+          {
+            "id": "17051542013433226",
+            "isPK": false,
+            "nullable": true,
+            "column": "DESCRIPTION",
+            "dataType": "TEXT"
+          },
+          {
+            "id": "17051542013436468",
+            "isPK": false,
+            "nullable": true,
+            "column": "FULLTEXT",
+            "dataType": "KEY"
+          }
+        ],
+        "allFields": [
+          {
+            "id": "17051542013432630",
+            "isPK": true,
+            "nullable": false,
+            "column": "FILM_ID",
+            "dataType": "SMALLINT"
+          },
+          {
+            "id": "17051542013431075",
+            "isPK": false,
+            "nullable": false,
+            "column": "TITLE",
+            "dataType": "VARCHAR(255)"
+          },
+          {
+            "id": "17051542013433226",
+            "isPK": false,
+            "nullable": true,
+            "column": "DESCRIPTION",
+            "dataType": "TEXT"
+          },
+          {
+            "id": "17051542013436468",
+            "isPK": false,
+            "nullable": true,
+            "column": "FULLTEXT",
+            "dataType": "KEY"
+          }
+        ]
+      }
+    }
+  },
+  "relationData": [
+    {
+      "parent": "er17051542013672530",
+      "child": "er17051542013791621",
+      "relationType": ""
+    },
+    {
+      "parent": "er17051542013791621",
+      "child": "er17051542013864285",
+      "relationType": ""
+    },
+    {
+      "parent": "er17051542013934506",
+      "child": "er17051542013672530",
+      "relationType": ""
+    },
+    {
+      "parent": "er17051542014066240",
+      "child": "er17051542013602698",
+      "relationType": ""
+    },
+    {
+      "parent": "er17051542014066240",
+      "child": "er17051542013997325",
+      "relationType": ""
+    },
+    {
+      "parent": "er17051542014123107",
+      "child": "er17051542013997325",
+      "relationType": ""
+    },
+    {
+      "parent": "er17051542014123107",
+      "child": "er17051542013736906",
+      "relationType": ""
+    }
+  ],
+  "textData": [
+    {
+      "x1": 69,
+      "y1": 52,
+      "data": "Sakila Spatial Sample Database Schema for MySQL (MariaDB)\n\nhttps://github.com/datacharmer/test_db"
+    }
+  ]
+}
