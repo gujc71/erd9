@@ -1,0 +1,575 @@
+{
+  "dbms": "mssql",
+  "entityData": {
+    "er17057612574132792": {
+      "x1": 87,
+      "y1": 242,
+      "x2": 282.767578125,
+      "y2": 377,
+      "data": {
+        "logicalName": "PRODUCTION.CATEGORIES",
+        "physicalName": "PRODUCTION.CATEGORIES",
+        "keys": [
+          {
+            "id": "f17057612573076215",
+            "isPK": true,
+            "nullable": true,
+            "column": "CATEGORY_ID",
+            "dataType": "INT"
+          }
+        ],
+        "fields": [
+          {
+            "id": "f17057612573076093",
+            "isPK": false,
+            "nullable": false,
+            "column": "CATEGORY_NAME",
+            "dataType": "VARCHAR(255)"
+          }
+        ]
+      }
+    },
+    "er17057612574192332": {
+      "x1": 88.767578125,
+      "y1": 500,
+      "x2": 262.32568359375,
+      "y2": 635,
+      "data": {
+        "logicalName": "PRODUCTION.BRANDS",
+        "physicalName": "PRODUCTION.BRANDS",
+        "keys": [
+          {
+            "id": "f17057612573185513",
+            "isPK": true,
+            "nullable": true,
+            "column": "BRAND_ID",
+            "dataType": "INT"
+          }
+        ],
+        "fields": [
+          {
+            "id": "f17057612573181650",
+            "isPK": false,
+            "nullable": false,
+            "column": "BRAND_NAME",
+            "dataType": "VARCHAR(255)"
+          }
+        ]
+      }
+    },
+    "er17057612574268305": {
+      "x1": 371.32568359375,
+      "y1": 309,
+      "x2": 560.76611328125,
+      "y2": 444,
+      "data": {
+        "logicalName": "PRODUCTION.PRODUCTS",
+        "physicalName": "PRODUCTION.PRODUCTS",
+        "keys": [
+          {
+            "id": "f17057612573291893",
+            "isPK": true,
+            "nullable": true,
+            "column": "PRODUCT_ID",
+            "dataType": "INT"
+          }
+        ],
+        "fields": [
+          {
+            "id": "f17057612573294469",
+            "isPK": false,
+            "nullable": false,
+            "column": "PRODUCT_NAME",
+            "dataType": "VARCHAR(255)"
+          },
+          {
+            "id": "f17057612573298030",
+            "isPK": false,
+            "nullable": false,
+            "column": "BRAND_ID",
+            "dataType": "INT",
+            "parent": "PRODUCTION.BRANDS",
+            "parentID": "f17057612573185513"
+          },
+          {
+            "id": "f17057612573297672",
+            "isPK": false,
+            "nullable": false,
+            "column": "CATEGORY_ID",
+            "dataType": "INT",
+            "parent": "PRODUCTION.CATEGORIES",
+            "parentID": "f17057612573076215"
+          },
+          {
+            "id": "f17057612573292973",
+            "isPK": false,
+            "nullable": false,
+            "column": "MODEL_YEAR",
+            "dataType": "SMALLINT"
+          },
+          {
+            "id": "f17057612573299050",
+            "isPK": false,
+            "nullable": false,
+            "column": "LIST_PRICE",
+            "dataType": "DECIMAL(10,2)"
+          }
+        ]
+      }
+    },
+    "er17057612574315541": {
+      "x1": 1012.76611328125,
+      "y1": 74,
+      "x2": 1179.59423828125,
+      "y2": 269,
+      "data": {
+        "logicalName": "SALES.CUSTOMERS",
+        "physicalName": "SALES.CUSTOMERS",
+        "keys": [
+          {
+            "id": "f17057612573403810",
+            "isPK": true,
+            "nullable": true,
+            "column": "CUSTOMER_ID",
+            "dataType": "INT"
+          }
+        ],
+        "fields": [
+          {
+            "id": "f17057612573408246",
+            "isPK": false,
+            "nullable": false,
+            "column": "FIRST_NAME",
+            "dataType": "VARCHAR(255)"
+          },
+          {
+            "id": "f17057612573406316",
+            "isPK": false,
+            "nullable": false,
+            "column": "LAST_NAME",
+            "dataType": "VARCHAR(255)"
+          },
+          {
+            "id": "f17057612573407495",
+            "isPK": false,
+            "nullable": true,
+            "column": "PHONE",
+            "dataType": "VARCHAR(25)"
+          },
+          {
+            "id": "f17057612573401998",
+            "isPK": false,
+            "nullable": false,
+            "column": "EMAIL",
+            "dataType": "VARCHAR(255)"
+          },
+          {
+            "id": "f17057612573409157",
+            "isPK": false,
+            "nullable": true,
+            "column": "STREET",
+            "dataType": "VARCHAR(255)"
+          },
+          {
+            "id": "f17057612573403006",
+            "isPK": false,
+            "nullable": true,
+            "column": "CITY",
+            "dataType": "VARCHAR(50)"
+          },
+          {
+            "id": "f17057612573409045",
+            "isPK": false,
+            "nullable": true,
+            "column": "STATE",
+            "dataType": "VARCHAR(25)"
+          },
+          {
+            "id": "f17057612573407091",
+            "isPK": false,
+            "nullable": true,
+            "column": "ZIP_CODE",
+            "dataType": "VARCHAR(5)"
+          }
+        ]
+      }
+    },
+    "er17057612574378296": {
+      "x1": 733.59423828125,
+      "y1": 432,
+      "x2": 906.34130859375,
+      "y2": 607,
+      "data": {
+        "logicalName": "SALES.STORES",
+        "physicalName": "SALES.STORES",
+        "keys": [
+          {
+            "id": "f17057612573516182",
+            "isPK": true,
+            "nullable": true,
+            "column": "STORE_ID",
+            "dataType": "INT"
+          }
+        ],
+        "fields": [
+          {
+            "id": "f17057612573517364",
+            "isPK": false,
+            "nullable": false,
+            "column": "STORE_NAME",
+            "dataType": "VARCHAR(255)"
+          },
+          {
+            "id": "f1705761257351849",
+            "isPK": false,
+            "nullable": true,
+            "column": "PHONE",
+            "dataType": "VARCHAR(25)"
+          },
+          {
+            "id": "f17057612573518364",
+            "isPK": false,
+            "nullable": true,
+            "column": "EMAIL",
+            "dataType": "VARCHAR(255)"
+          },
+          {
+            "id": "f17057612573515933",
+            "isPK": false,
+            "nullable": true,
+            "column": "STREET",
+            "dataType": "VARCHAR(255)"
+          },
+          {
+            "id": "f17057612573514728",
+            "isPK": false,
+            "nullable": true,
+            "column": "CITY",
+            "dataType": "VARCHAR(255)"
+          },
+          {
+            "id": "f17057612573512513",
+            "isPK": false,
+            "nullable": true,
+            "column": "STATE",
+            "dataType": "VARCHAR(10)"
+          },
+          {
+            "id": "f17057612573518227",
+            "isPK": false,
+            "nullable": true,
+            "column": "ZIP_CODE",
+            "dataType": "VARCHAR(5)"
+          }
+        ]
+      }
+    },
+    "er1705761257443651": {
+      "x1": 1042.34130859375,
+      "y1": 399,
+      "x2": 1203.0517578125,
+      "y2": 574,
+      "data": {
+        "logicalName": "SALES.STAFFS",
+        "physicalName": "SALES.STAFFS",
+        "keys": [
+          {
+            "id": "f1705761257362633",
+            "isPK": true,
+            "nullable": true,
+            "column": "STAFF_ID",
+            "dataType": "INT"
+          }
+        ],
+        "fields": [
+          {
+            "id": "f17057612573623214",
+            "isPK": false,
+            "nullable": false,
+            "column": "FIRST_NAME",
+            "dataType": "VARCHAR(50)"
+          },
+          {
+            "id": "f1705761257362941",
+            "isPK": false,
+            "nullable": false,
+            "column": "LAST_NAME",
+            "dataType": "VARCHAR(50)"
+          },
+          {
+            "id": "f1705761257362388",
+            "isPK": false,
+            "nullable": false,
+            "column": "EMAIL",
+            "dataType": "VARCHAR(255)"
+          },
+          {
+            "id": "f17057612573626370",
+            "isPK": false,
+            "nullable": true,
+            "column": "PHONE",
+            "dataType": "VARCHAR(25)"
+          },
+          {
+            "id": "f17057612573623816",
+            "isPK": false,
+            "nullable": false,
+            "column": "ACTIVE",
+            "dataType": "TINYINT"
+          },
+          {
+            "id": "f17057612573621903",
+            "isPK": false,
+            "nullable": false,
+            "column": "STORE_ID",
+            "dataType": "INT",
+            "parent": "SALES.STORES",
+            "parentID": "f17057612573516182"
+          },
+          {
+            "id": "f17057612573623401",
+            "isPK": false,
+            "nullable": true,
+            "column": "MANAGER_ID",
+            "dataType": "INT"
+          }
+        ]
+      }
+    },
+    "er17057612574492881": {
+      "x1": 746.0517578125,
+      "y1": 62,
+      "x2": 894.68017578125,
+      "y2": 237,
+      "data": {
+        "logicalName": "SALES.ORDERS",
+        "physicalName": "SALES.ORDERS",
+        "keys": [
+          {
+            "id": "f17057612573731684",
+            "isPK": true,
+            "nullable": true,
+            "column": "ORDER_ID",
+            "dataType": "INT"
+          }
+        ],
+        "fields": [
+          {
+            "id": "f17057612573734472",
+            "isPK": false,
+            "nullable": true,
+            "column": "CUSTOMER_ID",
+            "dataType": "INT",
+            "parent": "SALES.CUSTOMERS",
+            "parentID": "f17057612573403810"
+          },
+          {
+            "id": "f17057612573738523",
+            "isPK": false,
+            "nullable": false,
+            "column": "ORDER_STATUS",
+            "dataType": "TINYINT"
+          },
+          {
+            "id": "f17057612573734480",
+            "isPK": false,
+            "nullable": false,
+            "column": "ORDER_DATE",
+            "dataType": "DATE"
+          },
+          {
+            "id": "f17057612573731832",
+            "isPK": false,
+            "nullable": false,
+            "column": "REQUIRED_DATE",
+            "dataType": "DATE"
+          },
+          {
+            "id": "f17057612573737933",
+            "isPK": false,
+            "nullable": true,
+            "column": "SHIPPED_DATE",
+            "dataType": "DATE"
+          },
+          {
+            "id": "f17057612573736353",
+            "isPK": false,
+            "nullable": false,
+            "column": "STORE_ID",
+            "dataType": "INT",
+            "parent": "SALES.STORES",
+            "parentID": "f17057612573516182"
+          },
+          {
+            "id": "f17057612573735782",
+            "isPK": false,
+            "nullable": false,
+            "column": "STAFF_ID",
+            "dataType": "INT",
+            "parent": "SALES.STAFFS",
+            "parentID": "f1705761257362633"
+          }
+        ]
+      }
+    },
+    "er17057612574566036": {
+      "x1": 456.68017578125,
+      "y1": 64,
+      "x2": 615.78466796875,
+      "y2": 219,
+      "data": {
+        "logicalName": "SALES.ORDER_ITEMS",
+        "physicalName": "SALES.ORDER_ITEMS",
+        "keys": [
+          {
+            "id": "f17057612573845939",
+            "isPK": true,
+            "nullable": true,
+            "column": "ORDER_ID",
+            "dataType": "INT",
+            "parent": "SALES.ORDERS",
+            "parentID": "f17057612573731684"
+          },
+          {
+            "id": "f1705761257384132",
+            "isPK": true,
+            "nullable": true,
+            "column": "ITEM_ID",
+            "dataType": "INT"
+          }
+        ],
+        "fields": [
+          {
+            "id": "f17057612573847412",
+            "isPK": false,
+            "nullable": false,
+            "column": "PRODUCT_ID",
+            "dataType": "INT",
+            "parent": "PRODUCTION.PRODUCTS",
+            "parentID": "f17057612573291893"
+          },
+          {
+            "id": "f17057612573844579",
+            "isPK": false,
+            "nullable": false,
+            "column": "QUANTITY",
+            "dataType": "INT"
+          },
+          {
+            "id": "f17057612573841049",
+            "isPK": false,
+            "nullable": false,
+            "column": "LIST_PRICE",
+            "dataType": "DECIMAL(10,2)"
+          },
+          {
+            "id": "f17057612573848098",
+            "isPK": false,
+            "nullable": false,
+            "column": "DISCOUNT",
+            "dataType": "DECIMAL(4,2)",
+            "defaultValue": "0"
+          }
+        ]
+      }
+    },
+    "er17057612574688071": {
+      "x1": 426.78466796875,
+      "y1": 532,
+      "x2": 553.47900390625,
+      "y2": 687,
+      "data": {
+        "logicalName": "PRODUCTION.STOCKS",
+        "physicalName": "PRODUCTION.STOCKS",
+        "keys": [
+          {
+            "id": "f1705761257396822",
+            "isPK": true,
+            "nullable": true,
+            "column": "STORE_ID",
+            "dataType": "INT",
+            "parent": "SALES.STORES",
+            "parentID": "f17057612573516182"
+          },
+          {
+            "id": "f17057612573965133",
+            "isPK": true,
+            "nullable": true,
+            "column": "PRODUCT_ID",
+            "dataType": "INT",
+            "parent": "PRODUCTION.PRODUCTS",
+            "parentID": "f17057612573291893"
+          }
+        ],
+        "fields": [
+          {
+            "id": "f17057612573967397",
+            "isPK": false,
+            "nullable": true,
+            "column": "QUANTITY",
+            "dataType": "INT"
+          }
+        ]
+      }
+    }
+  },
+  "relationData": [
+    {
+      "parent": "er17057612574132792",
+      "child": "er17057612574268305",
+      "relationType": "ak"
+    },
+    {
+      "parent": "er17057612574192332",
+      "child": "er17057612574268305",
+      "relationType": "ak"
+    },
+    {
+      "parent": "er17057612574378296",
+      "child": "er1705761257443651",
+      "relationType": "ak"
+    },
+    {
+      "parent": "er17057612574315541",
+      "child": "er17057612574492881",
+      "relationType": "ak"
+    },
+    {
+      "parent": "er17057612574378296",
+      "child": "er17057612574492881",
+      "relationType": "ak"
+    },
+    {
+      "parent": "er1705761257443651",
+      "child": "er17057612574492881",
+      "relationType": "ak"
+    },
+    {
+      "parent": "er17057612574492881",
+      "child": "er17057612574566036",
+      "relationType": "pk"
+    },
+    {
+      "parent": "er17057612574268305",
+      "child": "er17057612574566036",
+      "relationType": "ak"
+    },
+    {
+      "parent": "er17057612574378296",
+      "child": "er17057612574688071",
+      "relationType": "pk"
+    },
+    {
+      "parent": "er17057612574268305",
+      "child": "er17057612574688071",
+      "relationType": "pk"
+    }
+  ],
+  "textData": [
+    {
+      "x1": 64,
+      "y1": 81,
+      "data": "BikeStores database Schema for MySQL (MariaDB)\nhttp://www.sqlservertutorial.net/load-sample-database/"
+    }
+  ]
+}

@@ -1,0 +1,841 @@
+{
+  "dbms": "mariadb",
+  "entityData": {
+    "er17058014464768417": {
+      "x1": 121,
+      "y1": 431,
+      "x2": 325.92529296875,
+      "y2": 806,
+      "data": {
+        "logicalName": "EMPLOYEES",
+        "physicalName": "EMPLOYEES",
+        "keys": [
+          {
+            "id": "f17058014460855052",
+            "isPK": true,
+            "nullable": false,
+            "column": "EMPLOYEEID",
+            "dataType": "INT"
+          }
+        ],
+        "fields": [
+          {
+            "id": "f17058014460863186",
+            "isPK": false,
+            "nullable": false,
+            "column": "LASTNAME",
+            "dataType": "NVARCHAR(20)"
+          },
+          {
+            "id": "f17058014460869577",
+            "isPK": false,
+            "nullable": false,
+            "column": "FIRSTNAME",
+            "dataType": "NVARCHAR(10)"
+          },
+          {
+            "id": "f17058014460864059",
+            "isPK": false,
+            "nullable": true,
+            "column": "TITLE",
+            "dataType": "NVARCHAR(30)"
+          },
+          {
+            "id": "f17058014460863410",
+            "isPK": false,
+            "nullable": true,
+            "column": "TITLEOFCOURTESY",
+            "dataType": "NVARCHAR(25)"
+          },
+          {
+            "id": "f1705801446086815",
+            "isPK": false,
+            "nullable": true,
+            "column": "BIRTHDATE",
+            "dataType": "DATETIME"
+          },
+          {
+            "id": "f17058014460863987",
+            "isPK": false,
+            "nullable": true,
+            "column": "HIREDATE",
+            "dataType": "DATETIME"
+          },
+          {
+            "id": "f17058014460865987",
+            "isPK": false,
+            "nullable": true,
+            "column": "ADDRESS",
+            "dataType": "NVARCHAR(60)"
+          },
+          {
+            "id": "f17058014460864856",
+            "isPK": false,
+            "nullable": true,
+            "column": "CITY",
+            "dataType": "NVARCHAR(15)"
+          },
+          {
+            "id": "f17058014460862981",
+            "isPK": false,
+            "nullable": true,
+            "column": "REGION",
+            "dataType": "NVARCHAR(15)"
+          },
+          {
+            "id": "f17058014460861077",
+            "isPK": false,
+            "nullable": true,
+            "column": "POSTALCODE",
+            "dataType": "NVARCHAR(10)"
+          },
+          {
+            "id": "f1705801446086637",
+            "isPK": false,
+            "nullable": true,
+            "column": "COUNTRY",
+            "dataType": "NVARCHAR(15)"
+          },
+          {
+            "id": "f17058014460865856",
+            "isPK": false,
+            "nullable": true,
+            "column": "HOMEPHONE",
+            "dataType": "NVARCHAR(24)"
+          },
+          {
+            "id": "f17058014460861829",
+            "isPK": false,
+            "nullable": true,
+            "column": "EXTENSION",
+            "dataType": "NVARCHAR(4)"
+          },
+          {
+            "id": "f17058014460861174",
+            "isPK": false,
+            "nullable": true,
+            "column": "PHOTO",
+            "dataType": "IMAGE"
+          },
+          {
+            "id": "f17058014460867710",
+            "isPK": false,
+            "nullable": true,
+            "column": "NOTES",
+            "dataType": "NTEXT"
+          },
+          {
+            "id": "f1705801446086505",
+            "isPK": false,
+            "nullable": true,
+            "column": "REPORTSTO",
+            "dataType": "INT"
+          },
+          {
+            "id": "f1705801446086769",
+            "isPK": false,
+            "nullable": true,
+            "column": "PHOTOPATH",
+            "dataType": "NVARCHAR(255)"
+          }
+        ],
+        "indexes": [
+          {
+            "name": "LASTNAME",
+            "fields": "LASTNAME"
+          },
+          {
+            "name": "POSTALCODE",
+            "fields": "POSTALCODE"
+          }
+        ]
+      }
+    },
+    "er17058014464835330": {
+      "x1": 1151.92529296875,
+      "y1": 214,
+      "x2": 1343.4013671875,
+      "y2": 349,
+      "data": {
+        "logicalName": "CATEGORIES",
+        "physicalName": "CATEGORIES",
+        "keys": [
+          {
+            "id": "f17058014461213113",
+            "isPK": true,
+            "nullable": false,
+            "column": "CATEGORYID",
+            "dataType": "INT"
+          }
+        ],
+        "fields": [
+          {
+            "id": "f17058014461217336",
+            "isPK": false,
+            "nullable": false,
+            "column": "CATEGORYNAME",
+            "dataType": "NVARCHAR(15)"
+          },
+          {
+            "id": "f1705801446121637",
+            "isPK": false,
+            "nullable": true,
+            "column": "DESCRIPTION",
+            "dataType": "NTEXT"
+          },
+          {
+            "id": "f17058014461211727",
+            "isPK": false,
+            "nullable": true,
+            "column": "PICTURE",
+            "dataType": "IMAGE"
+          }
+        ],
+        "indexes": [
+          {
+            "name": "CATEGORYNAME",
+            "fields": "CATEGORYNAME"
+          }
+        ]
+      }
+    },
+    "er1705801446489586": {
+      "x1": 126.4013671875,
+      "y1": 136,
+      "x2": 311.9638671875,
+      "y2": 371,
+      "data": {
+        "logicalName": "CUSTOMERS",
+        "physicalName": "CUSTOMERS",
+        "keys": [
+          {
+            "id": "f17058014461439259",
+            "isPK": true,
+            "nullable": false,
+            "column": "CUSTOMERID",
+            "dataType": "NCHAR(5)"
+          }
+        ],
+        "fields": [
+          {
+            "id": "f17058014461435860",
+            "isPK": false,
+            "nullable": false,
+            "column": "COMPANYNAME",
+            "dataType": "NVARCHAR(40)"
+          },
+          {
+            "id": "f17058014461431221",
+            "isPK": false,
+            "nullable": true,
+            "column": "CONTACTNAME",
+            "dataType": "NVARCHAR(30)"
+          },
+          {
+            "id": "f17058014461436859",
+            "isPK": false,
+            "nullable": true,
+            "column": "CONTACTTITLE",
+            "dataType": "NVARCHAR(30)"
+          },
+          {
+            "id": "f17058014461433853",
+            "isPK": false,
+            "nullable": true,
+            "column": "ADDRESS",
+            "dataType": "NVARCHAR(60)"
+          },
+          {
+            "id": "f17058014461439334",
+            "isPK": false,
+            "nullable": true,
+            "column": "CITY",
+            "dataType": "NVARCHAR(15)"
+          },
+          {
+            "id": "f17058014461433832",
+            "isPK": false,
+            "nullable": true,
+            "column": "REGION",
+            "dataType": "NVARCHAR(15)"
+          },
+          {
+            "id": "f17058014461434648",
+            "isPK": false,
+            "nullable": true,
+            "column": "POSTALCODE",
+            "dataType": "NVARCHAR(10)"
+          },
+          {
+            "id": "f170580144614320",
+            "isPK": false,
+            "nullable": true,
+            "column": "COUNTRY",
+            "dataType": "NVARCHAR(15)"
+          },
+          {
+            "id": "f17058014461432141",
+            "isPK": false,
+            "nullable": true,
+            "column": "PHONE",
+            "dataType": "NVARCHAR(24)"
+          },
+          {
+            "id": "f17058014461439006",
+            "isPK": false,
+            "nullable": true,
+            "column": "FAX",
+            "dataType": "NVARCHAR(24)"
+          }
+        ],
+        "indexes": [
+          {
+            "name": "CITY",
+            "fields": "CITY"
+          },
+          {
+            "name": "COMPANYNAME",
+            "fields": "COMPANYNAME"
+          },
+          {
+            "name": "POSTALCODE",
+            "fields": "POSTALCODE"
+          },
+          {
+            "name": "REGION",
+            "fields": "REGION"
+          }
+        ]
+      }
+    },
+    "er17058014464969130": {
+      "x1": 484.9638671875,
+      "y1": 618,
+      "x2": 670.5263671875,
+      "y2": 753,
+      "data": {
+        "logicalName": "SHIPPERS",
+        "physicalName": "SHIPPERS",
+        "keys": [
+          {
+            "id": "f17058014461996590",
+            "isPK": true,
+            "nullable": false,
+            "column": "SHIPPERID",
+            "dataType": "INT"
+          }
+        ],
+        "fields": [
+          {
+            "id": "f17058014461997161",
+            "isPK": false,
+            "nullable": false,
+            "column": "COMPANYNAME",
+            "dataType": "NVARCHAR(40)"
+          },
+          {
+            "id": "f17058014461996938",
+            "isPK": false,
+            "nullable": true,
+            "column": "PHONE",
+            "dataType": "NVARCHAR(24)"
+          }
+        ]
+      }
+    },
+    "er1705801446502765": {
+      "x1": 1153.5263671875,
+      "y1": 481,
+      "x2": 1339.0888671875,
+      "y2": 736,
+      "data": {
+        "logicalName": "SUPPLIERS",
+        "physicalName": "SUPPLIERS",
+        "keys": [
+          {
+            "id": "f17058014462091393",
+            "isPK": true,
+            "nullable": false,
+            "column": "SUPPLIERID",
+            "dataType": "INT"
+          }
+        ],
+        "fields": [
+          {
+            "id": "f17058014462094776",
+            "isPK": false,
+            "nullable": false,
+            "column": "COMPANYNAME",
+            "dataType": "NVARCHAR(40)"
+          },
+          {
+            "id": "f17058014462095101",
+            "isPK": false,
+            "nullable": true,
+            "column": "CONTACTNAME",
+            "dataType": "NVARCHAR(30)"
+          },
+          {
+            "id": "f17058014462098125",
+            "isPK": false,
+            "nullable": true,
+            "column": "CONTACTTITLE",
+            "dataType": "NVARCHAR(30)"
+          },
+          {
+            "id": "f17058014462097951",
+            "isPK": false,
+            "nullable": true,
+            "column": "ADDRESS",
+            "dataType": "NVARCHAR(60)"
+          },
+          {
+            "id": "f17058014462097581",
+            "isPK": false,
+            "nullable": true,
+            "column": "CITY",
+            "dataType": "NVARCHAR(15)"
+          },
+          {
+            "id": "f17058014462098629",
+            "isPK": false,
+            "nullable": true,
+            "column": "REGION",
+            "dataType": "NVARCHAR(15)"
+          },
+          {
+            "id": "f17058014462091127",
+            "isPK": false,
+            "nullable": true,
+            "column": "POSTALCODE",
+            "dataType": "NVARCHAR(10)"
+          },
+          {
+            "id": "f17058014462108211",
+            "isPK": false,
+            "nullable": true,
+            "column": "COUNTRY",
+            "dataType": "NVARCHAR(15)"
+          },
+          {
+            "id": "f17058014462107211",
+            "isPK": false,
+            "nullable": true,
+            "column": "PHONE",
+            "dataType": "NVARCHAR(24)"
+          },
+          {
+            "id": "f17058014462101096",
+            "isPK": false,
+            "nullable": true,
+            "column": "FAX",
+            "dataType": "NVARCHAR(24)"
+          },
+          {
+            "id": "f17058014462107515",
+            "isPK": false,
+            "nullable": true,
+            "column": "HOMEPAGE",
+            "dataType": "NTEXT"
+          }
+        ],
+        "indexes": [
+          {
+            "name": "COMPANYNAME",
+            "fields": "COMPANYNAME"
+          },
+          {
+            "name": "POSTALCODE",
+            "fields": "POSTALCODE"
+          }
+        ]
+      }
+    },
+    "er17058014465105644": {
+      "x1": 493.0888671875,
+      "y1": 207,
+      "x2": 692.111328125,
+      "y2": 502,
+      "data": {
+        "logicalName": "ORDERS",
+        "physicalName": "ORDERS",
+        "keys": [
+          {
+            "id": "f17058014462437276",
+            "isPK": true,
+            "nullable": false,
+            "column": "ORDERID",
+            "dataType": "INT"
+          }
+        ],
+        "fields": [
+          {
+            "id": "f17058014462436702",
+            "isPK": false,
+            "nullable": true,
+            "column": "CUSTOMERID",
+            "dataType": "NCHAR(5)",
+            "parent": "CUSTOMERS",
+            "parentID": "f17058014461439259"
+          },
+          {
+            "id": "f17058014462436986",
+            "isPK": false,
+            "nullable": true,
+            "column": "EMPLOYEEID",
+            "dataType": "INT",
+            "parent": "EMPLOYEES",
+            "parentID": "f17058014460855052"
+          },
+          {
+            "id": "f17058014462434048",
+            "isPK": false,
+            "nullable": true,
+            "column": "ORDERDATE",
+            "dataType": "DATETIME"
+          },
+          {
+            "id": "f17058014462431154",
+            "isPK": false,
+            "nullable": true,
+            "column": "REQUIREDDATE",
+            "dataType": "DATETIME"
+          },
+          {
+            "id": "f17058014462434357",
+            "isPK": false,
+            "nullable": true,
+            "column": "SHIPPEDDATE",
+            "dataType": "DATETIME"
+          },
+          {
+            "id": "f17058014462433111",
+            "isPK": false,
+            "nullable": true,
+            "column": "SHIPVIA",
+            "dataType": "INT",
+            "parent": "SHIPPERS",
+            "parentID": "f17058014461996590"
+          },
+          {
+            "id": "f17058014462439487",
+            "isPK": false,
+            "nullable": true,
+            "column": "FREIGHT",
+            "dataType": "MONEY",
+            "defaultValue": "(0)"
+          },
+          {
+            "id": "f17058014462435230",
+            "isPK": false,
+            "nullable": true,
+            "column": "SHIPNAME",
+            "dataType": "NVARCHAR(40)"
+          },
+          {
+            "id": "f1705801446243854",
+            "isPK": false,
+            "nullable": true,
+            "column": "SHIPADDRESS",
+            "dataType": "NVARCHAR(60)"
+          },
+          {
+            "id": "f17058014462432346",
+            "isPK": false,
+            "nullable": true,
+            "column": "SHIPCITY",
+            "dataType": "NVARCHAR(15)"
+          },
+          {
+            "id": "f17058014462433377",
+            "isPK": false,
+            "nullable": true,
+            "column": "SHIPREGION",
+            "dataType": "NVARCHAR(15)"
+          },
+          {
+            "id": "f17058014462436105",
+            "isPK": false,
+            "nullable": true,
+            "column": "SHIPPOSTALCODE",
+            "dataType": "NVARCHAR(10)"
+          },
+          {
+            "id": "f17058014462432238",
+            "isPK": false,
+            "nullable": true,
+            "column": "SHIPCOUNTRY",
+            "dataType": "NVARCHAR(15)"
+          }
+        ],
+        "indexes": [
+          {
+            "name": "CUSTOMERID",
+            "fields": "CUSTOMERID"
+          },
+          {
+            "name": "CUSTOMERSORDERS",
+            "fields": "CUSTOMERID"
+          },
+          {
+            "name": "EMPLOYEEID",
+            "fields": "EMPLOYEEID"
+          },
+          {
+            "name": "EMPLOYEESORDERS",
+            "fields": "EMPLOYEEID"
+          },
+          {
+            "name": "ORDERDATE",
+            "fields": "ORDERDATE"
+          },
+          {
+            "name": "SHIPPEDDATE",
+            "fields": "SHIPPEDDATE"
+          },
+          {
+            "name": "SHIPPERSORDERS",
+            "fields": "SHIPVIA"
+          },
+          {
+            "name": "SHIPPOSTALCODE",
+            "fields": "SHIPPOSTALCODE"
+          }
+        ]
+      }
+    },
+    "er17058014465161585": {
+      "x1": 798.111328125,
+      "y1": 440,
+      "x2": 1000.7861328125,
+      "y2": 655,
+      "data": {
+        "logicalName": "PRODUCTS",
+        "physicalName": "PRODUCTS",
+        "keys": [
+          {
+            "id": "f17058014463466111",
+            "isPK": true,
+            "nullable": false,
+            "column": "PRODUCTID",
+            "dataType": "INT"
+          }
+        ],
+        "fields": [
+          {
+            "id": "f17058014463467984",
+            "isPK": false,
+            "nullable": false,
+            "column": "PRODUCTNAME",
+            "dataType": "NVARCHAR(40)"
+          },
+          {
+            "id": "f17058014463462825",
+            "isPK": false,
+            "nullable": true,
+            "column": "SUPPLIERID",
+            "dataType": "INT",
+            "parent": "SUPPLIERS",
+            "parentID": "f17058014462091393"
+          },
+          {
+            "id": "f17058014463463333",
+            "isPK": false,
+            "nullable": true,
+            "column": "CATEGORYID",
+            "dataType": "INT",
+            "parent": "CATEGORIES",
+            "parentID": "f17058014461213113"
+          },
+          {
+            "id": "f17058014463469606",
+            "isPK": false,
+            "nullable": true,
+            "column": "QUANTITYPERUNIT",
+            "dataType": "NVARCHAR(20)"
+          },
+          {
+            "id": "f17058014463466490",
+            "isPK": false,
+            "nullable": true,
+            "column": "UNITPRICE",
+            "dataType": "MONEY",
+            "defaultValue": "(0)"
+          },
+          {
+            "id": "f17058014463464247",
+            "isPK": false,
+            "nullable": true,
+            "column": "UNITSINSTOCK",
+            "dataType": "SMALLINT",
+            "defaultValue": "(0)"
+          },
+          {
+            "id": "f17058014463466985",
+            "isPK": false,
+            "nullable": true,
+            "column": "UNITSONORDER",
+            "dataType": "SMALLINT",
+            "defaultValue": "(0)"
+          },
+          {
+            "id": "f17058014463469757",
+            "isPK": false,
+            "nullable": true,
+            "column": "REORDERLEVEL",
+            "dataType": "SMALLINT",
+            "defaultValue": "(0)"
+          },
+          {
+            "id": "f1705801446346784",
+            "isPK": false,
+            "nullable": false,
+            "column": "DISCONTINUED",
+            "dataType": "BIT",
+            "defaultValue": "(0)"
+          }
+        ],
+        "indexes": [
+          {
+            "name": "CATEGORIESPRODUCTS",
+            "fields": "CATEGORYID"
+          },
+          {
+            "name": "CATEGORYID",
+            "fields": "CATEGORYID"
+          },
+          {
+            "name": "PRODUCTNAME",
+            "fields": "PRODUCTNAME"
+          },
+          {
+            "name": "SUPPLIERID",
+            "fields": "SUPPLIERID"
+          },
+          {
+            "name": "SUPPLIERSPRODUCTS",
+            "fields": "SUPPLIERID"
+          }
+        ]
+      }
+    },
+    "er17058014465225160": {
+      "x1": 853.7861328125,
+      "y1": 130,
+      "x2": 981.4404296875,
+      "y2": 285,
+      "data": {
+        "logicalName": "ORDER",
+        "physicalName": "ORDER",
+        "keys": [
+          {
+            "id": "f17058014464136154",
+            "isPK": true,
+            "nullable": false,
+            "column": "ORDERID",
+            "dataType": "INT",
+            "parent": "ORDERS",
+            "parentID": "f17058014462437276"
+          },
+          {
+            "id": "f17058014464137643",
+            "isPK": true,
+            "nullable": false,
+            "column": "PRODUCTID",
+            "dataType": "INT",
+            "parent": "PRODUCTS",
+            "parentID": "f17058014463466111"
+          }
+        ],
+        "fields": [
+          {
+            "id": "f17058014464137573",
+            "isPK": false,
+            "nullable": false,
+            "column": "UNITPRICE",
+            "dataType": "MONEY",
+            "defaultValue": "(0)"
+          },
+          {
+            "id": "f17058014464134885",
+            "isPK": false,
+            "nullable": false,
+            "column": "QUANTITY",
+            "dataType": "SMALLINT",
+            "defaultValue": "(1)"
+          },
+          {
+            "id": "f17058014464135575",
+            "isPK": false,
+            "nullable": false,
+            "column": "DISCOUNT",
+            "dataType": "REAL",
+            "defaultValue": "(0)"
+          }
+        ],
+        "indexes": [
+          {
+            "name": "ORDERID",
+            "fields": "ORDERID"
+          },
+          {
+            "name": "ORDERSORDER_DETAILS",
+            "fields": "ORDERID"
+          },
+          {
+            "name": "PRODUCTID",
+            "fields": "PRODUCTID"
+          },
+          {
+            "name": "PRODUCTSORDER_DETAILS",
+            "fields": "PRODUCTID"
+          }
+        ]
+      }
+    }
+  },
+  "relationData": [
+    {
+      "parent": "er1705801446489586",
+      "child": "er17058014465105644",
+      "relationType": "ak"
+    },
+    {
+      "parent": "er17058014464768417",
+      "child": "er17058014465105644",
+      "relationType": "ak"
+    },
+    {
+      "parent": "er17058014464969130",
+      "child": "er17058014465105644",
+      "relationType": "ak"
+    },
+    {
+      "parent": "er17058014464835330",
+      "child": "er17058014465161585",
+      "relationType": "ak"
+    },
+    {
+      "parent": "er1705801446502765",
+      "child": "er17058014465161585",
+      "relationType": "ak"
+    },
+    {
+      "parent": "er17058014465105644",
+      "child": "er17058014465225160",
+      "relationType": "pk"
+    },
+    {
+      "parent": "er17058014465161585",
+      "child": "er17058014465225160",
+      "relationType": "pk"
+    }
+  ],
+  "textData": [
+    {
+      "x1": 133,
+      "y1": 60,
+      "data": "Northwind database Schema for MS-SQL\nhttps://github.com/Microsoft/sql-server-samples/tree/master/samples/databases/northwind-pubs"
+    }
+  ]
+}

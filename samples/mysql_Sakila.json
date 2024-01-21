@@ -1150,7 +1150,7 @@
     {
       "x1": 81,
       "y1": 39,
-      "data": "Sakila Spatial Sample Database Schema for MySQL (MariaDB)\nhttps://github.com/datacharmer/test_db"
+      "data": "Sakila Spatial Database Schema for MySQL (MariaDB)\nhttps://github.com/datacharmer/test_db/tree/master/sakila"
     }
   ]
 }

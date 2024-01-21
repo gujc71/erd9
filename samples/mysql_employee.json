@@ -302,7 +302,7 @@
     {
       "x1": 104,
       "y1": 52,
-      "data": "Sample employee database Schema for MySQL (MariaDB)\nhttps://github.com/datacharmer/test_db"
+      "data": "Employee database Schema for MySQL (MariaDB)\nhttps://github.com/datacharmer/test_db"
     }
   ]
 }
