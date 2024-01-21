@@ -1,5 +1,5 @@
 {
-  "dbms": "mariadb",
+  "dbms": "mssql",
   "entityData": {
     "er17058014464768417": {
       "x1": 121,
