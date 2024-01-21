@@ -1,0 +1,651 @@
+{
+  "dbms": "oracle",
+  "entityData": {
+    "er17058232222615588": {
+      "x1": 119,
+      "y1": 637,
+      "x2": 298.44580078125,
+      "y2": 772,
+      "data": {
+        "logicalName": "REGIONS",
+        "physicalName": "REGIONS",
+        "keys": [
+          {
+            "id": "f17058232221209659",
+            "isPK": true,
+            "nullable": true,
+            "column": "REGION_ID",
+            "dataType": "NUMBER",
+            "defaultValue": "AS"
+          }
+        ],
+        "fields": [
+          {
+            "id": "f17058232221206759",
+            "isPK": false,
+            "nullable": false,
+            "column": "REGION_NAME",
+            "dataType": "VARCHAR2(50)"
+          }
+        ]
+      }
+    },
+    "er17058232222668393": {
+      "x1": 108.44580078125,
+      "y1": 411,
+      "x2": 298.6875,
+      "y2": 546,
+      "data": {
+        "logicalName": "COUNTRIES",
+        "physicalName": "COUNTRIES",
+        "keys": [
+          {
+            "id": "f17058232221313454",
+            "isPK": true,
+            "nullable": true,
+            "column": "COUNTRY_ID",
+            "dataType": "CHAR(2)"
+          }
+        ],
+        "fields": [
+          {
+            "id": "f17058232221314238",
+            "isPK": false,
+            "nullable": false,
+            "column": "COUNTRY_NAME",
+            "dataType": "VARCHAR2(40)"
+          },
+          {
+            "id": "f17058232221311371",
+            "isPK": false,
+            "nullable": true,
+            "column": "REGION_ID",
+            "dataType": "NUMBER",
+            "parent": "REGIONS",
+            "parentID": "f17058232221209659"
+          }
+        ]
+      }
+    },
+    "er17058232222721853": {
+      "x1": 125.6875,
+      "y1": 177,
+      "x2": 304.32763671875,
+      "y2": 312,
+      "data": {
+        "logicalName": "LOCATIONS",
+        "physicalName": "LOCATIONS",
+        "keys": [
+          {
+            "id": "f17058232221424962",
+            "isPK": true,
+            "nullable": true,
+            "column": "LOCATION_ID",
+            "dataType": "NUMBER",
+            "defaultValue": "AS"
+          }
+        ],
+        "fields": [
+          {
+            "id": "f17058232221421617",
+            "isPK": false,
+            "nullable": false,
+            "column": "ADDRESS",
+            "dataType": "VARCHAR2(255)"
+          },
+          {
+            "id": "f17058232221421586",
+            "isPK": false,
+            "nullable": true,
+            "column": "POSTAL_CODE",
+            "dataType": "VARCHAR2(20)"
+          },
+          {
+            "id": "f17058232221423869",
+            "isPK": false,
+            "nullable": true,
+            "column": "CITY",
+            "dataType": "VARCHAR2(50)"
+          },
+          {
+            "id": "f17058232221424163",
+            "isPK": false,
+            "nullable": true,
+            "column": "STATE",
+            "dataType": "VARCHAR2(50)"
+          },
+          {
+            "id": "f17058232221424781",
+            "isPK": false,
+            "nullable": true,
+            "column": "COUNTRY_ID",
+            "dataType": "CHAR(2)",
+            "parent": "COUNTRIES",
+            "parentID": "f17058232221313454"
+          }
+        ]
+      }
+    },
+    "er17058232222792925": {
+      "x1": 452.32763671875,
+      "y1": 165,
+      "x2": 661.08984375,
+      "y2": 300,
+      "data": {
+        "logicalName": "WAREHOUSES",
+        "physicalName": "WAREHOUSES",
+        "keys": [
+          {
+            "id": "f17058232221539919",
+            "isPK": true,
+            "nullable": true,
+            "column": "WAREHOUSE_ID",
+            "dataType": "NUMBER",
+            "defaultValue": "AS"
+          }
+        ],
+        "fields": [
+          {
+            "id": "f17058232221531371",
+            "isPK": false,
+            "nullable": true,
+            "column": "WAREHOUSE_NAME",
+            "dataType": "VARCHAR(255)"
+          },
+          {
+            "id": "f17058232221537546",
+            "isPK": false,
+            "nullable": true,
+            "column": "LOCATION_ID",
+            "dataType": "NUMBER(12,0)",
+            "parent": "LOCATIONS",
+            "parentID": "f17058232221424962"
+          }
+        ]
+      }
+    },
+    "er17058232222856375": {
+      "x1": 1316.08984375,
+      "y1": 486,
+      "x2": 1484.734375,
+      "y2": 661,
+      "data": {
+        "logicalName": "EMPLOYEES",
+        "physicalName": "EMPLOYEES",
+        "keys": [
+          {
+            "id": "f17058232221652299",
+            "isPK": true,
+            "nullable": true,
+            "column": "EMPLOYEE_ID",
+            "dataType": "NUMBER",
+            "defaultValue": "AS"
+          }
+        ],
+        "fields": [
+          {
+            "id": "f1705823222165530",
+            "isPK": false,
+            "nullable": false,
+            "column": "FIRST_NAME",
+            "dataType": "VARCHAR(255)"
+          },
+          {
+            "id": "f17058232221658320",
+            "isPK": false,
+            "nullable": false,
+            "column": "LAST_NAME",
+            "dataType": "VARCHAR(255)"
+          },
+          {
+            "id": "f17058232221653226",
+            "isPK": false,
+            "nullable": false,
+            "column": "EMAIL",
+            "dataType": "VARCHAR(255)"
+          },
+          {
+            "id": "f17058232221656020",
+            "isPK": false,
+            "nullable": false,
+            "column": "PHONE",
+            "dataType": "VARCHAR(50)"
+          },
+          {
+            "id": "f17058232221655655",
+            "isPK": false,
+            "nullable": false,
+            "column": "HIRE_DATE",
+            "dataType": "DATE"
+          },
+          {
+            "id": "f17058232221657235",
+            "isPK": false,
+            "nullable": true,
+            "column": "MANAGER_ID",
+            "dataType": "NUMBER(12,0)"
+          },
+          {
+            "id": "f1705823222165739",
+            "isPK": false,
+            "nullable": false,
+            "column": "JOB_TITLE",
+            "dataType": "VARCHAR(255)"
+          }
+        ]
+      }
+    },
+    "er17058232222915610": {
+      "x1": 425.734375,
+      "y1": 352,
+      "x2": 628.61962890625,
+      "y2": 487,
+      "data": {
+        "logicalName": "PRODUCT_CATEGORIES",
+        "physicalName": "PRODUCT_CATEGORIES",
+        "keys": [
+          {
+            "id": "f1705823222176536",
+            "isPK": true,
+            "nullable": true,
+            "column": "CATEGORY_ID",
+            "dataType": "NUMBER",
+            "defaultValue": "AS"
+          }
+        ],
+        "fields": [
+          {
+            "id": "f17058232221765632",
+            "isPK": false,
+            "nullable": false,
+            "column": "CATEGORY_NAME",
+            "dataType": "VARCHAR2(255)"
+          }
+        ]
+      }
+    },
+    "er170582322229854": {
+      "x1": 792.61962890625,
+      "y1": 301,
+      "x2": 989.177734375,
+      "y2": 436,
+      "data": {
+        "logicalName": "PRODUCTS",
+        "physicalName": "PRODUCTS",
+        "keys": [
+          {
+            "id": "f17058232221877564",
+            "isPK": true,
+            "nullable": true,
+            "column": "PRODUCT_ID",
+            "dataType": "NUMBER",
+            "defaultValue": "AS"
+          }
+        ],
+        "fields": [
+          {
+            "id": "f17058232221878895",
+            "isPK": false,
+            "nullable": false,
+            "column": "PRODUCT_NAME",
+            "dataType": "VARCHAR2(255)"
+          },
+          {
+            "id": "f17058232221874797",
+            "isPK": false,
+            "nullable": true,
+            "column": "DESCRIPTION",
+            "dataType": "VARCHAR2(2000)"
+          },
+          {
+            "id": "f17058232221879960",
+            "isPK": false,
+            "nullable": true,
+            "column": "STANDARD_COST",
+            "dataType": "NUMBER(9,2)"
+          },
+          {
+            "id": "f17058232221872768",
+            "isPK": false,
+            "nullable": true,
+            "column": "LIST_PRICE",
+            "dataType": "NUMBER(9,2)"
+          },
+          {
+            "id": "f17058232221871402",
+            "isPK": false,
+            "nullable": false,
+            "column": "CATEGORY_ID",
+            "dataType": "NUMBER",
+            "parent": "PRODUCT_CATEGORIES",
+            "parentID": "f1705823222176536"
+          }
+        ]
+      }
+    },
+    "er17058232223048066": {
+      "x1": 776.177734375,
+      "y1": 492,
+      "x2": 940.9443359375,
+      "y2": 627,
+      "data": {
+        "logicalName": "CUSTOMERS",
+        "physicalName": "CUSTOMERS",
+        "keys": [
+          {
+            "id": "f17058232221985770",
+            "isPK": true,
+            "nullable": true,
+            "column": "CUSTOMER_ID",
+            "dataType": "NUMBER",
+            "defaultValue": "AS"
+          }
+        ],
+        "fields": [
+          {
+            "id": "f17058232221984813",
+            "isPK": false,
+            "nullable": false,
+            "column": "NAME",
+            "dataType": "VARCHAR2(255)"
+          },
+          {
+            "id": "f17058232221985870",
+            "isPK": false,
+            "nullable": true,
+            "column": "ADDRESS",
+            "dataType": "VARCHAR2(255)"
+          },
+          {
+            "id": "f17058232221989133",
+            "isPK": false,
+            "nullable": true,
+            "column": "WEBSITE",
+            "dataType": "VARCHAR2(255)"
+          },
+          {
+            "id": "f17058232221981777",
+            "isPK": false,
+            "nullable": true,
+            "column": "CREDIT_LIMIT",
+            "dataType": "NUMBER(8,2)"
+          }
+        ]
+      }
+    },
+    "er17058232223118319": {
+      "x1": 432.9443359375,
+      "y1": 521,
+      "x2": 606.89013671875,
+      "y2": 656,
+      "data": {
+        "logicalName": "CONTACTS",
+        "physicalName": "CONTACTS",
+        "keys": [
+          {
+            "id": "f17058232222097368",
+            "isPK": true,
+            "nullable": true,
+            "column": "CONTACT_ID",
+            "dataType": "NUMBER",
+            "defaultValue": "AS"
+          }
+        ],
+        "fields": [
+          {
+            "id": "f17058232222091788",
+            "isPK": false,
+            "nullable": false,
+            "column": "FIRST_NAME",
+            "dataType": "VARCHAR2(255)"
+          },
+          {
+            "id": "f1705823222209661",
+            "isPK": false,
+            "nullable": false,
+            "column": "LAST_NAME",
+            "dataType": "VARCHAR2(255)"
+          },
+          {
+            "id": "f17058232222097333",
+            "isPK": false,
+            "nullable": false,
+            "column": "EMAIL",
+            "dataType": "VARCHAR2(255)"
+          },
+          {
+            "id": "f17058232222093734",
+            "isPK": false,
+            "nullable": true,
+            "column": "PHONE",
+            "dataType": "VARCHAR2(20)"
+          },
+          {
+            "id": "f1705823222209985",
+            "isPK": false,
+            "nullable": true,
+            "column": "CUSTOMER_ID",
+            "dataType": "NUMBER",
+            "parent": "CUSTOMERS",
+            "parentID": "f17058232221985770"
+          }
+        ]
+      }
+    },
+    "er17058232223173537": {
+      "x1": 1032.89013671875,
+      "y1": 517,
+      "x2": 1226.98291015625,
+      "y2": 652,
+      "data": {
+        "logicalName": "ORDERS",
+        "physicalName": "ORDERS",
+        "keys": [
+          {
+            "id": "f17058232222202956",
+            "isPK": true,
+            "nullable": true,
+            "column": "ORDER_ID",
+            "dataType": "NUMBER",
+            "defaultValue": "AS"
+          }
+        ],
+        "fields": [
+          {
+            "id": "f17058232222201689",
+            "isPK": false,
+            "nullable": false,
+            "column": "CUSTOMER_ID",
+            "dataType": "NUMBER(6,0)",
+            "parent": "CUSTOMERS",
+            "parentID": "f17058232221985770"
+          },
+          {
+            "id": "f1705823222220510",
+            "isPK": false,
+            "nullable": false,
+            "column": "STATUS",
+            "dataType": "VARCHAR(20)"
+          },
+          {
+            "id": "f17058232222209370",
+            "isPK": false,
+            "nullable": true,
+            "column": "SALESMAN_ID",
+            "dataType": "NUMBER(6,0)",
+            "parent": "EMPLOYEES",
+            "parentID": "f17058232221652299"
+          },
+          {
+            "id": "f17058232222204715",
+            "isPK": false,
+            "nullable": false,
+            "column": "ORDER_DATE",
+            "dataType": "DATE"
+          }
+        ]
+      }
+    },
+    "er17058232223231752": {
+      "x1": 1092.54443359375,
+      "y1": 222,
+      "x2": 1284.3974609375,
+      "y2": 377,
+      "data": {
+        "logicalName": "ORDER_ITEMS",
+        "physicalName": "ORDER_ITEMS",
+        "keys": [
+          {
+            "id": "f17058232222318839",
+            "isPK": true,
+            "nullable": true,
+            "column": "ORDER_ID",
+            "dataType": "NUMBER(12,0)",
+            "parent": "ORDERS",
+            "parentID": "f17058232222202956"
+          },
+          {
+            "id": "f17058232222311363",
+            "isPK": true,
+            "nullable": true,
+            "column": "ITEM_ID",
+            "dataType": "NUMBER(12,0)"
+          }
+        ],
+        "fields": [
+          {
+            "id": "f17058232222312701",
+            "isPK": false,
+            "nullable": false,
+            "column": "PRODUCT_ID",
+            "dataType": "NUMBER(12,0)",
+            "parent": "PRODUCTS",
+            "parentID": "f17058232221877564"
+          },
+          {
+            "id": "f17058232222315024",
+            "isPK": false,
+            "nullable": false,
+            "column": "QUANTITY",
+            "dataType": "NUMBER(8,2)"
+          },
+          {
+            "id": "f17058232222314891",
+            "isPK": false,
+            "nullable": false,
+            "column": "UNIT_PRICE",
+            "dataType": "NUMBER(8,2)"
+          }
+        ]
+      }
+    },
+    "er17058232223308455": {
+      "x1": 796.958984375,
+      "y1": 61,
+      "x2": 1006.1337890625,
+      "y2": 216,
+      "data": {
+        "logicalName": "INVENTORIES",
+        "physicalName": "INVENTORIES",
+        "keys": [
+          {
+            "id": "f17058232222432324",
+            "isPK": true,
+            "nullable": true,
+            "column": "PRODUCT_ID",
+            "dataType": "NUMBER(12,0)",
+            "parent": "PRODUCTS",
+            "parentID": "f17058232221877564"
+          },
+          {
+            "id": "f17058232222435030",
+            "isPK": true,
+            "nullable": true,
+            "column": "WAREHOUSE_ID",
+            "dataType": "NUMBER(12,0)",
+            "parent": "WAREHOUSES",
+            "parentID": "f17058232221539919"
+          }
+        ],
+        "fields": [
+          {
+            "id": "f17058232222438562",
+            "isPK": false,
+            "nullable": false,
+            "column": "QUANTITY",
+            "dataType": "NUMBER(8,0)"
+          }
+        ]
+      }
+    }
+  },
+  "relationData": [
+    {
+      "parent": "er17058232222615588",
+      "child": "er17058232222668393",
+      "relationType": "ak"
+    },
+    {
+      "parent": "er17058232222668393",
+      "child": "er17058232222721853",
+      "relationType": "ak"
+    },
+    {
+      "parent": "er17058232222721853",
+      "child": "er17058232222792925",
+      "relationType": "ak"
+    },
+    {
+      "parent": "er17058232222915610",
+      "child": "er170582322229854",
+      "relationType": "ak"
+    },
+    {
+      "parent": "er17058232223048066",
+      "child": "er17058232223118319",
+      "relationType": "ak"
+    },
+    {
+      "parent": "er17058232223048066",
+      "child": "er17058232223173537",
+      "relationType": "ak"
+    },
+    {
+      "parent": "er17058232222856375",
+      "child": "er17058232223173537",
+      "relationType": "ak"
+    },
+    {
+      "parent": "er170582322229854",
+      "child": "er17058232223231752",
+      "relationType": "ak"
+    },
+    {
+      "parent": "er17058232223173537",
+      "child": "er17058232223231752",
+      "relationType": "pk"
+    },
+    {
+      "parent": "er170582322229854",
+      "child": "er17058232223308455",
+      "relationType": "pk"
+    },
+    {
+      "parent": "er17058232222792925",
+      "child": "er17058232223308455",
+      "relationType": "pk"
+    }
+  ],
+  "textData": [
+    {
+      "x1": 117,
+      "y1": 61,
+      "data": "OT (global fictitious company that sells computer hardware) database Schema for Oracle.\nhttps://www.oracletutorial.com/getting-started/oracle-sample-database/"
+    },
+    {
+      "x1": 664,
+      "y1": 133,
+      "data": "Comments"
+    }
+  ]
+}
