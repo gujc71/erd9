@@ -48,6 +48,17 @@ These are functions for saving the created ERD on the server or performing opera
 - ERD Sharing: A feature that allows individuals to share the ERD they have created with others and discuss this with others.
 - Generate program language code: Generating source code for a program language like JavaScript(Node.js) or Python to perform CRUD (Create, Read, Update, Delete) operations on the selected entity(table).
 
+## Shortcut keys
+- Plus(+) : Zoom in
+- Minus(-): Zoom out
+- Del: Remove Entity or Relationship
+- Ctrl + S : Save Document
+- Ctrl + C : Copy Entity 
+- Ctrl + P : Paste Entity 
+- Ctrl + F : Find Entity 
+- Ctrl + Z : Undo
+- Ctrl + Y : Redo 
+  
 <br/><br/>
 You are free to use it by accessing the current website without any limitations, 
 
