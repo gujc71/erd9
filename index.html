@@ -5,39 +5,39 @@
 	<link rel="stylesheet" type="text/css" href="erd9.css">
 	<script src="https://d3js.org/d3.v7.min.js"></script>
 	<script src="erd9.min.js"></script>
-	<!-- <script src="testData.js"></script> -->
 	<title>ERD9 - Best Databse Modeling Tool</title>
 </head>
 <body style="stroke-width: 0px; background-color:white">
-	<div width="99%" height="30" class="toolbar">
+	<div class="toolbar">
 		<a href="https://github.com/gujc71/erd9" target="_blank"><div class="logo">&nbsp;</div></a>
 
 		<div style="position: relative;   display: inline-block;">
 			<div class="filename" id ="filename">no name</div>
 			<div class="findEntityDiv" title="find Entity">
 				<input type="text" id="findKeyword"/>
-				<button id="findNext">↓</button>
-				<button id="findPrevious">↑</button>
-				<button id="closeFind">x</button>
+				<button id="findNext" title="Find next">↓</button>
+				<button id="findPrevious" title="Find previous">↑</button>
+				<button id="closeFind" title="close">x</button>
 			</div>
-						
+
 			<div class="toolbarFunction">
 				<div class="dropdown">
 					<button class="dropbtn">Files</button>
-					<div class="dropdown-content">
+					<div class="dropdown-content" style="width: 120px;">
 						<a id="newDocument">New</a>
-						<a id="saveFile">Save</a>
-						<a id="openFile">Open</a>
-						<a id="exportFile">Export</a>
-						<a id="importFile">Import</a>
+						<a id="openSamples">Open Samples</a>
+						<a id="saveFile" title="stored in the current web browser">Save</a>
+						<a id="openFile" title="Open a saved file in the current web browser">Open</a>
+						<a id="exportFile" title="download to your PC">Export</a>
+						<a id="importFile" title="upload from your PC">Import</a>
 					</div>
 				</div>
 
 				<button id="arrowBtn" class="toggle-diagram active" style="margin-left:30px"> Arrow </button>
 				<button id="textBtn" class="toggle-diagram"> Text </button>
 				<button id="entityBtn" class="toggle-diagram"> Entity </button>
-				<button id="relationPKBtn" class="toggle-diagram"> PK</button>
-				<button id="relationAKBtn" class="toggle-diagram"> AK</button>
+				<button id="relationPKBtn" class="toggle-diagram" title="Primary Key"> PK</button>
+				<button id="relationAKBtn" class="toggle-diagram" title="Alternate Key"> AK</button>
 				
 				<button id="logicalBtn" class="toggle-view-mode" style="margin-left:30px"> Logical </button>
 				<button id="physicalBtn" class="toggle-view-mode active"> Physical </button>
@@ -45,9 +45,9 @@
 				<div class="dropdown" style="margin-left:30px">
 					<button id="dbmsDropbtn" class="dropbtn">MariaDB</button>
 					<div class="dropdown-content">
-						<a id="dbms4mariadb">MariaDB</a>
-						<a id="dbms4oracle">ORACLE</a>
-						<a id="dbms4mssql">MS-SQL</a>
+					<a id="dbms4mariadb">MariaDB</a>
+					<a id="dbms4oracle">ORACLE</a>
+					<a id="dbms4mssql">MS-SQL</a>
 					</div>
 				</div>		
 				<div class="dropdown" style="margin-left:30px; width: 200px;">
@@ -57,11 +57,10 @@
 						<a id="generateDDL">Generate DDL</a>
 						<a id="tableDescription">Table Description</a>
 					</div>
-				</div>		
+				</div>					
 			</div>
 		</div>
 	</div>
-
 	<svg width="5555" height="5555" transform="translate(0, 68) scale(1)"></svg>
 </body>
 
