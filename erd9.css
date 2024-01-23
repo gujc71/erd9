@@ -116,7 +116,7 @@ text {
   stroke-width: 0; 
 }
 
-.selectedDiagram {
+.selectedEntity {
   stroke: blue;
   stroke-width: 1.5; 
 }
@@ -445,4 +445,14 @@ cursor: pointer;
   100% { transform: rotate(360deg); }
 }
 
+.animationed-rect {
+  animation: keyframesRemoveEntity 2s forwards;
+}
 
+/* 애니메이션 키프레임 정의 */
+@keyframes keyframesRemoveEntity {
+  to {
+    width: 20px;
+    height: 10px;
+  }
+}
