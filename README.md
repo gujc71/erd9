@@ -24,7 +24,7 @@ If you encounter any issues while using ERD9, please leave a detailed descriptio
 ## Additional features
 - Simple import from DDL: Extract table information from DDL(Data Definition Language) to create an ERD. Only simple and structured SQL statements can be processed.
 - Generate DDL: Generate DDL based on the created ERD information. You can copy and use this SQL statement.
-- Table Desciption: Generate a table desciption based on the ERD information you created.
+- Table Description: Generate a table description based on the ERD information you created.
 
 ![manual3](https://gujc71.github.io/erd9/images/manual_3.gif)
 
