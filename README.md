@@ -31,7 +31,6 @@ If you encounter any issues while using ERD9, please leave a detailed descriptio
 <br/><br/>
 ## Near future
 It seems like some aesthetic design enhancements and dynamic functionalities need to be added. I'm considering animation effects where entities shrink and disappear when deleted, or where related relationships are highlighted when an entity is selected.
-- One to One Relationship
 - ~~Find Entity~~
 - ~~Zoom In / Out~~
 - Printer output
