@@ -1,264 +1,264 @@
 {
   "dbms": "mariadb",
   "entityData": {
-    "er17057320151171866": {
-      "x1": 525,
-      "y1": 157,
-      "x2": 685.71044921875,
-      "y2": 292,
+    "er17064442243545095": {
+      "x1": 473,
+      "y1": 330,
+      "x2": 633.71044921875,
+      "y2": 465,
       "data": {
         "logicalName": "EMPLOYEES",
         "physicalName": "EMPLOYEES",
         "keys": [
           {
-            "id": "f17057320150442272",
+            "id": "f1706444224282553",
             "isPK": true,
-            "nullable": false,
+            "notNull": true,
             "column": "EMP_NO",
             "dataType": "INT"
           }
         ],
         "fields": [
           {
-            "id": "f17057320150447113",
+            "id": "f17064442242838551",
             "isPK": false,
-            "nullable": false,
+            "notNull": true,
             "column": "BIRTH_DATE",
             "dataType": "DATE"
           },
           {
-            "id": "f17057320150445997",
+            "id": "f17064442242834257",
             "isPK": false,
-            "nullable": false,
+            "notNull": true,
             "column": "FIRST_NAME",
             "dataType": "VARCHAR(14)"
           },
           {
-            "id": "f17057320150443813",
+            "id": "f17064442242831471",
             "isPK": false,
-            "nullable": false,
+            "notNull": true,
             "column": "LAST_NAME",
             "dataType": "VARCHAR(16)"
           },
           {
-            "id": "f17057320150445608",
+            "id": "f17064442242839017",
             "isPK": false,
-            "nullable": false,
+            "notNull": true,
             "column": "GENDER",
-            "dataType": "ENUM"
+            "dataType": "ENUM('M','F')"
           },
           {
-            "id": "f17057320150444091",
+            "id": "f17064442242836642",
             "isPK": false,
-            "nullable": false,
+            "notNull": true,
             "column": "HIRE_DATE",
             "dataType": "DATE"
           }
         ]
       }
     },
-    "er17057320151231067": {
-      "x1": 160.71044921875,
-      "y1": 509,
-      "x2": 318.982421875,
-      "y2": 644,
+    "er17064442243615362": {
+      "x1": 447.71044921875,
+      "y1": 75,
+      "x2": 605.982421875,
+      "y2": 210,
       "data": {
         "logicalName": "DEPARTMENTS",
         "physicalName": "DEPARTMENTS",
         "keys": [
           {
-            "id": "f17057320150558581",
+            "id": "f17064442242935485",
             "isPK": true,
-            "nullable": false,
+            "notNull": true,
             "column": "DEPT_NO",
             "dataType": "CHAR(4)"
           }
         ],
         "fields": [
           {
-            "id": "f17057320150555371",
+            "id": "f17064442242934835",
             "isPK": false,
-            "nullable": false,
+            "notNull": true,
             "column": "DEPT_NAME",
             "dataType": "VARCHAR(40)"
           }
         ]
       }
     },
-    "er17057320151298841": {
-      "x1": 534.982421875,
-      "y1": 447,
-      "x2": 674.4931640625,
-      "y2": 602,
+    "er17064442243678451": {
+      "x1": 99.982421875,
+      "y1": 239,
+      "x2": 239.4931640625,
+      "y2": 394,
       "data": {
         "logicalName": "DEPT_MANAGER",
         "physicalName": "DEPT_MANAGER",
         "keys": [
           {
-            "id": "f17057320150662441",
+            "id": "f17064442243041910",
             "isPK": true,
-            "nullable": false,
+            "notNull": true,
             "column": "EMP_NO",
             "dataType": "INT",
             "parent": "EMPLOYEES",
-            "parentID": "f17057320150442272"
+            "parentID": "f1706444224282553"
           },
           {
-            "id": "f17057320150664395",
+            "id": "f17064442243043278",
             "isPK": true,
-            "nullable": false,
+            "notNull": true,
             "column": "DEPT_NO",
             "dataType": "CHAR(4)",
             "parent": "DEPARTMENTS",
-            "parentID": "f17057320150558581"
+            "parentID": "f17064442242935485"
           }
         ],
         "fields": [
           {
-            "id": "f17057320150666621",
+            "id": "f17064442243048139",
             "isPK": false,
-            "nullable": false,
+            "notNull": true,
             "column": "FROM_DATE",
             "dataType": "DATE"
           },
           {
-            "id": "f1705732015066205",
+            "id": "f17064442243045834",
             "isPK": false,
-            "nullable": false,
+            "notNull": true,
             "column": "TO_DATE",
             "dataType": "DATE"
           }
         ]
       }
     },
-    "er17057320151356751": {
-      "x1": 156.0546875,
-      "y1": 218,
-      "x2": 295.5654296875,
-      "y2": 373,
+    "er1706444224373808": {
+      "x1": 841.0546875,
+      "y1": 210,
+      "x2": 980.5654296875,
+      "y2": 365,
       "data": {
         "logicalName": "DEPT_EMP",
         "physicalName": "DEPT_EMP",
         "keys": [
           {
-            "id": "f17057320150787547",
+            "id": "f17064442243159010",
             "isPK": true,
-            "nullable": false,
+            "notNull": true,
             "column": "EMP_NO",
             "dataType": "INT",
             "parent": "EMPLOYEES",
-            "parentID": "f17057320150442272"
+            "parentID": "f1706444224282553"
           },
           {
-            "id": "f17057320150783429",
+            "id": "f17064442243152320",
             "isPK": true,
-            "nullable": false,
+            "notNull": true,
             "column": "DEPT_NO",
             "dataType": "CHAR(4)",
             "parent": "DEPARTMENTS",
-            "parentID": "f17057320150558581"
+            "parentID": "f17064442242935485"
           }
         ],
         "fields": [
           {
-            "id": "f1705732015078391",
+            "id": "f17064442243157411",
             "isPK": false,
-            "nullable": false,
+            "notNull": true,
             "column": "FROM_DATE",
             "dataType": "DATE"
           },
           {
-            "id": "f1705732015078236",
+            "id": "f17064442243157158",
             "isPK": false,
-            "nullable": false,
+            "notNull": true,
             "column": "TO_DATE",
             "dataType": "DATE"
           }
         ]
       }
     },
-    "er17057320151417038": {
-      "x1": 799.126953125,
-      "y1": 62,
-      "x2": 921.11279296875,
-      "y2": 237,
+    "er17064442243793241": {
+      "x1": 810.126953125,
+      "y1": 443,
+      "x2": 932.11279296875,
+      "y2": 618,
       "data": {
         "logicalName": "TITLES",
         "physicalName": "TITLES",
         "keys": [
           {
-            "id": "f17057320150893391",
+            "id": "f17064442243271616",
             "isPK": true,
-            "nullable": false,
+            "notNull": true,
             "column": "EMP_NO",
             "dataType": "INT",
             "parent": "EMPLOYEES",
-            "parentID": "f17057320150442272"
+            "parentID": "f1706444224282553"
           },
           {
-            "id": "f17057320150899097",
+            "id": "f17064442243271022",
             "isPK": true,
-            "nullable": false,
+            "notNull": true,
             "column": "TITLE",
             "dataType": "VARCHAR(50)"
           },
           {
-            "id": "f17057320150895342",
+            "id": "f17064442243273174",
             "isPK": true,
-            "nullable": false,
+            "notNull": true,
             "column": "FROM_DATE",
             "dataType": "DATE"
           }
         ],
         "fields": [
           {
-            "id": "f17057320150891513",
+            "id": "f1706444224327374",
             "isPK": false,
-            "nullable": true,
+            "notNull": false,
             "column": "TO_DATE",
             "dataType": "DATE"
           }
         ]
       }
     },
-    "er17057320151487514": {
-      "x1": 798.11279296875,
-      "y1": 410,
-      "x2": 912.4853515625,
-      "y2": 565,
+    "er17064442243848462": {
+      "x1": 98.11279296875,
+      "y1": 494,
+      "x2": 212.4853515625,
+      "y2": 649,
       "data": {
         "logicalName": "SALARIES",
         "physicalName": "SALARIES",
         "keys": [
           {
-            "id": "f17057320151001525",
+            "id": "f17064442243379030",
             "isPK": true,
-            "nullable": false,
+            "notNull": true,
             "column": "EMP_NO",
             "dataType": "INT",
             "parent": "EMPLOYEES",
-            "parentID": "f17057320150442272"
+            "parentID": "f1706444224282553"
           },
           {
-            "id": "f1705732015100262",
+            "id": "f17064442243371269",
             "isPK": true,
-            "nullable": false,
+            "notNull": true,
             "column": "FROM_DATE",
             "dataType": "DATE"
           }
         ],
         "fields": [
           {
-            "id": "f1705732015100523",
+            "id": "f17064442243379179",
             "isPK": false,
-            "nullable": false,
+            "notNull": true,
             "column": "SALARY",
             "dataType": "INT"
           },
           {
-            "id": "f17057320151004501",
+            "id": "f17064442243375213",
             "isPK": false,
-            "nullable": false,
+            "notNull": true,
             "column": "TO_DATE",
             "dataType": "DATE"
           }
@@ -268,40 +268,46 @@
   },
   "relationData": [
     {
-      "parent": "er17057320151171866",
-      "child": "er17057320151298841",
+      "id": "INX_17064442243042342",
+      "parent": "er17064442243545095",
+      "child": "er17064442243678451",
       "relationType": "pk"
     },
     {
-      "parent": "er17057320151231067",
-      "child": "er17057320151298841",
+      "id": "INX_17064442243049348",
+      "parent": "er17064442243615362",
+      "child": "er17064442243678451",
       "relationType": "pk"
     },
     {
-      "parent": "er17057320151171866",
-      "child": "er17057320151356751",
+      "id": "INX_17064442243154227",
+      "parent": "er17064442243545095",
+      "child": "er1706444224373808",
       "relationType": "pk"
     },
     {
-      "parent": "er17057320151231067",
-      "child": "er17057320151356751",
+      "id": "INX_17064442243154136",
+      "parent": "er17064442243615362",
+      "child": "er1706444224373808",
       "relationType": "pk"
     },
     {
-      "parent": "er17057320151171866",
-      "child": "er17057320151417038",
+      "id": "INX_17064442243273037",
+      "parent": "er17064442243545095",
+      "child": "er17064442243793241",
       "relationType": "pk"
     },
     {
-      "parent": "er17057320151171866",
-      "child": "er17057320151487514",
+      "id": "INX_17064442243379003",
+      "parent": "er17064442243545095",
+      "child": "er17064442243848462",
       "relationType": "pk"
     }
   ],
   "textData": [
     {
-      "x1": 104,
-      "y1": 52,
+      "x1": 68,
+      "y1": 60,
       "data": "Employee database Schema for MySQL (MariaDB)\nhttps://github.com/datacharmer/test_db"
     }
   ]

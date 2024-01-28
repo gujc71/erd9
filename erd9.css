@@ -162,10 +162,11 @@ text {
 .erd9Dialog-content {
 	background-color: #fefefe;
 	margin: 15% auto; 
-	padding: 10px;
+	padding: 10px 20px 10px 20px;
 	border: 1px solid #888;
   width: 560px;
-	max-width: 600px;
+  font-size: 11pt;
+	_max-width: 600px;
 }
 
 .erd9Dialog-content p{
@@ -241,7 +242,7 @@ text {
 
 .erd9Dialog-content .tablename button{
   position: absolute;
-  left: 500px;
+  left: 604px;
 }
 
 .erd9Dialog-grid table, .tab-logger table {
@@ -253,6 +254,7 @@ text {
   padding: 3px;
   text-align: center;
   background-color: lightgray;
+  height: 19px;
 }
 .erd9Dialog-grid td, .tab-logger td {
   border: 1px solid black;
@@ -317,11 +319,10 @@ cursor: pointer;
   display: inline-block;
   width: 49%;
   vertical-align: top;
-  margin-left: 5px;
 }
 
 .tableindexList {
-  width: 250px;
+  width: 300px;
   max-height: 90px;
   margin-top: 10px;
   list-style: none;
@@ -343,7 +344,7 @@ cursor: pointer;
 
 .indexcolumnul {
   list-style: none;
-  width: 250px;
+  width: 300px;
   padding: 0px;
 }
 
