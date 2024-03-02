@@ -26,6 +26,7 @@ svg {
 
 text {
   cursor: default;
+  fill: black;
 }
 
 /* toolbar */	
@@ -99,10 +100,10 @@ text {
 }
 
 .selectRect {
-  fill: transparent;
+  fill: none;
   stroke: gray;
   cursor: default;
-  stroke-width: 1;
+  _stroke-width: 1;
 }
 
 .basicRectShape {
@@ -141,6 +142,10 @@ text {
   height: 19px;
 }
 
+.findEntityDiv input:focus {
+  background-color: #ffff00;
+}
+
 .findEntityDiv.expanded{
   width: 220px;
 }
@@ -159,21 +164,39 @@ text {
   _user-select: none;
 }
 
+.erd9Dialog H4{
+  margin: 10px 0px;
+}
+
 .erd9Dialog-content {
 	background-color: #fefefe;
 	margin: 15% auto; 
 	padding: 10px 20px 10px 20px;
 	border: 1px solid #888;
   width: 560px;
-  font-size: 11pt;
+  _font-size: 11pt;
 	_max-width: 600px;
 }
 
-.erd9Dialog-content p{
-  font-size: 11pt;
+.erd9Dialog-content.wide {
+  width: 700px;
+}
+
+.erd9Dialog-content span{
+  font-size: 10pt;
+}
+
+.erd9Dialog-content p {
+  font-size: 10pt;
   line-height: 1.3;
 }
 
+.erd9Dialog-content .relationOption{
+  border: 1px solid lightgray;
+  padding: 5px;
+  margin: 10px;
+  font-size: 10pt;
+}
 
 .erd9Dialog_close {
 	color: #aaa;
@@ -217,13 +240,9 @@ text {
 	margin-right: 10px;
 }
 
-.erd9Dialog-content-wide {
-	background-color: #fefefe;
-	margin: 15% auto; 
-	padding: 10px;
-	border: 1px solid #888;
-  width: 700px;
-	_max-width: 600px;
+.erd9Dialog-explain {
+  margin: 5px;
+  font-size: 10pt;
 }
 
 /* -------------------------- */
@@ -265,6 +284,11 @@ text {
   text-overflow: ellipsis;
   max-width: 100px;
 }
+.tab-logger .changePK {
+  text-align: center;
+  cursor: pointer;
+}
+
 .erd9Dialog-grid .input-cell {
   width: 90%;
   border: none;
@@ -300,11 +324,11 @@ cursor: pointer;
 	position: absolute;
 }
 
-#fileTableBody, #smapleTableBody td {
+.fileTableBody, .sampleTableBody td {
   text-align: center;
 }
 
-#fileTableBody td a {
+.fileTableBody td a {
   cursor: pointer;
 }
 
@@ -416,6 +440,8 @@ cursor: pointer;
 
 .hide {
   display: none;
+  stroke: none;
+  width: 0px;
 }	
 
 .loading-screen {
@@ -456,4 +482,67 @@ cursor: pointer;
     width: 20px;
     height: 10px;
   }
+}
+
+
+.erd9Dialog-300{
+	font-size: 11px;
+	width: 100%;
+  height: 300px;
+  overflow: auto;	
+  border: 1px solid;    
+}
+
+.print-size {
+  width: 45px;
+  margin: 0px 10px;;
+  font-size: 10pt;
+}
+
+.previewImg {
+  display: inline-block;
+  position: relative;
+  margin: 1px;
+  border: 1px solid gray;
+  opacity: 0.4;
+  background-size: cover;
+}
+
+.previewImg:hover .printMenuDiv {
+  display: block;
+}
+
+.printMenuDiv {
+  position: absolute;
+  width: 60px;
+  height: 26px;
+  background-color: transparent;
+  _border: 1px solid gray;
+  display: none;
+  top: 70%;
+  left: calc(50% - 25px);
+  animation: previewImgKeyframes 1s 1 ;
+}
+@keyframes previewImgKeyframes {
+  0% {
+    transform: scale(0.1);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+
+.printImgButton{
+  width: 24px;
+  height: 24px;
+  margin: 0px 2px;
+  background-image: url("images/svg/printing-page.svg");
+  display: inline-block;
+}
+.downloadImgButton{
+  width: 24px;
+  height: 24px;
+  margin: 0px 2px;
+  background-image: url("images/svg/cloud-download.svg");
+  display: inline-block;
 }

@@ -25,7 +25,7 @@ If you encounter any issues while using ERD9, please leave a detailed descriptio
 - Simple import from DDL: Extract table information from DDL(Data Definition Language) to create an ERD. Only simple and structured SQL statements can be processed.
 - Generate DDL: Generate DDL based on the created ERD information. You can copy and use this SQL statement.
 - Table Description: Generate a table description based on the ERD information you created.
-
+- Detect Missing Relationship: Find missing relationships between entities based on attribute names (and data types).
 ![manual3](https://gujc71.github.io/erd9/images/manual_3.gif)
 
 <br/><br/>
@@ -33,7 +33,7 @@ If you encounter any issues while using ERD9, please leave a detailed descriptio
 It seems like some aesthetic design enhancements and dynamic functionalities need to be added. I'm considering animation effects where entities shrink and disappear when deleted, or where related relationships are highlighted when an entity is selected.
 - ~~Find Entity~~
 - ~~Zoom In / Out~~
-- Printer output
+- ~~Printer output~~
 - ~~Multiple Selection: Select multiple entities to move or delete.~~
 - ~~Undo / Redo~~
 
