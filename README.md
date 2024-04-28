@@ -29,13 +29,14 @@ If you encounter any issues while using ERD9, please leave a detailed descriptio
 ![manual3](https://gujc71.github.io/erd9/images/manual_3.gif)
 
 <br/><br/>
-## Near future
+## Near future (done)
 It seems like some aesthetic design enhancements and dynamic functionalities need to be added. I'm considering animation effects where entities shrink and disappear when deleted, or where related relationships are highlighted when an entity is selected.
 - ~~Find Entity~~
 - ~~Zoom In / Out~~
 - ~~Printer output~~
 - ~~Multiple Selection: Select multiple entities to move or delete.~~
 - ~~Undo / Redo~~
+- ~~Make ERD with AI (ChatGPT)~~
 
 <br/><br/>
 ## Far future
