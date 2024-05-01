@@ -165,12 +165,19 @@ text {
 }
 
 .erd9Dialog H4{
-  margin: 10px 0px;
+  margin: 0px 0px;
+  padding: 10px 0px;
+  cursor: move;
 }
 
 .erd9Dialog-content {
+  position: fixed;
+  _top: 50%;
+  _left: 50%;
+  _transform: translate(-50%, -50%);
+
 	background-color: #fefefe;
-	margin: 15% auto; 
+	_margin: 15% auto; 
 	padding: 10px 20px 10px 20px;
 	border: 1px solid #888;
   width: 560px;
@@ -286,6 +293,10 @@ text {
 }
 .tab-logger .changePK {
   text-align: center;
+  cursor: pointer;
+}
+
+.mousePointer {
   cursor: pointer;
 }
 

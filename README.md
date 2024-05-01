@@ -36,6 +36,7 @@ It seems like some aesthetic design enhancements and dynamic functionalities nee
 - ~~Printer output~~
 - ~~Multiple Selection: Select multiple entities to move or delete.~~
 - ~~Undo / Redo~~
+- ~~Auto Detect Missing Relationship~~
 - ~~Make ERD with AI (ChatGPT)~~
 
 <br/><br/>
