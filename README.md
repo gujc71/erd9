@@ -29,6 +29,13 @@ If you encounter any issues while using ERD9, please leave a detailed descriptio
 ![manual3](https://gujc71.github.io/erd9/images/manual_3.gif)
 
 <br/><br/>
+## Additional features with ChatGPT:
+- Create Entity: You can ask ChatGPT for the structure of the entity you want to create. For example, the structure of a shopping mall.
+- ERD Review and Feedback: You can get an evaluation of your ERD from ChatGPT.
+- Free Talk: You can directly request ChatGPT to generate what you need. For example, generating MyBatis code to use in Java.
+![manual4](https://gujc71.github.io/erd9/images/manual_4.gif)
+
+<br/><br/>
 ## Near future (done)
 It seems like some aesthetic design enhancements and dynamic functionalities need to be added. I'm considering animation effects where entities shrink and disappear when deleted, or where related relationships are highlighted when an entity is selected.
 - ~~Find Entity~~

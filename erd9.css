@@ -154,7 +154,7 @@ text {
 .erd9Dialog {
 	display: none; 
 	position: fixed;
-	z-index: 1; 
+	z-index: 1000; 
 	left: 0;
 	top: 0;
 	width: 100%;
@@ -193,7 +193,7 @@ text {
   font-size: 10pt;
 }
 
-.erd9Dialog-content p, div {
+.erd9Dialog-content p, .erd9Dialog-content div {
   font-size: 10pt;
   line-height: 1.3;
 }
@@ -247,11 +247,26 @@ text {
 	margin-right: 10px;
 }
 
-.erd9Dialog-explain {
+.erd9Dialog-explain,
+.erd9Dialog-explain4importDDL {
   margin: 5px;
   font-size: 10pt;
 }
 
+.erd9Dialog-explain4importDDL {
+  display: inline-block;
+}
+
+.erd9Dialog-tabMenu {
+  position: absolute;
+  top: 40px;
+  left: 559px;
+}
+
+.otherLink {
+  margin-left: 10px;
+  text-decoration: none;
+}
 /* -------------------------- */
 .erd9Dialog-grid {
 	font-size: 11px;
@@ -308,7 +323,7 @@ text {
   background-color: inherit;
 }
 .erd9Dialog-grid .sbFieldType {
-  position: absolute;
+  position: fixed;
   width: 20px;
 border: none;
 font-size: 14px;
@@ -318,7 +333,7 @@ cursor: pointer;
 }
 
 .erd9Dialog-grid .sbFieldTypeList {
-  position: absolute; 
+  position: fixed; 
   display: none;
   width: 100px;
   outline: none; 
@@ -332,9 +347,13 @@ cursor: pointer;
 }	
 
 .erd9Dialog-grid .tableGrid_menuBar {
-	position: absolute;
+	position: fixed;
 }
 
+.sampleTableBody {
+  cursor: default;
+  user-select: none; 
+}
 .fileTableBody, .sampleTableBody td {
   text-align: center;
 }
@@ -420,7 +439,7 @@ cursor: pointer;
 }
 
 .tab-logger {
-  height: 350px;
+  height: 300px;
   width: 99%;
   overflow: scroll;
   font-size: 11px;
@@ -587,3 +606,76 @@ cursor: pointer;
 .tab-logger  table {
   border-collapse: collapse;
 } */
+
+.floatingMenu {
+  position: fixed;
+  bottom: 50px;
+  right: 50px;
+  width: 60px;
+  height: 60px;
+  background-color: #007bff;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+  z-index: 10;
+font-size: 25px;
+}
+.floatingMenu i {
+  color: white;
+  font-size: 24px;
+}
+.chatBox {
+  position: fixed;
+  bottom: 120px;
+  right: 50px;
+  width: 300px;
+  background-color: white;
+  border: 1px solid #ccc;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+  display: none;
+  flex-direction: column;
+  padding: 10px;
+  z-index: 999;
+font-size: 11px;
+}
+.optionGroup {
+  margin-bottom: 10px;
+}
+
+.optionGroup input {
+  margin-right: 5px;
+}
+
+#optionGroup2 {
+  border: 1px solid lightgray;
+  border-radius: 10px;
+  padding: 2px 5px 5px 5px;
+}
+
+.chatInput {
+  display: flex;
+  margin-top: 10px;
+}
+.chatInput input {
+  flex: 1;
+  padding: 5px;
+  border: 1px solid #ccc;
+  border-radius: 5px 0 0 5px;
+}
+.chatInput button {
+  padding: 5px 10px;
+  border: none;
+  background-color: #007bff;
+  color: white;
+  border-radius: 0 5px 5px 0;
+  cursor: pointer;
+}
+.chatMessage{
+  width: 235px;
+  height: 50px;
+  margin-right: 5px;
+}
