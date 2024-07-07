@@ -350,7 +350,7 @@ cursor: pointer;
 	position: fixed;
 }
 
-.sampleTableBody {
+.sampleTableBody, .fileTableBody {
   cursor: default;
   user-select: none; 
 }
