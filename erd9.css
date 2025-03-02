@@ -358,8 +358,13 @@ cursor: pointer;
   text-align: center;
 }
 
-.fileTableBody td a {
+.fileTableBody td a,
+.tablegrid-tbody td a {
   cursor: pointer;
+}
+
+.alignCenter{
+  text-align: center;
 }
 
 .selectRow {
@@ -384,6 +389,7 @@ cursor: pointer;
   grid-template-columns: repeat(1, 1fr); 
   gap: 2px;
   padding: 0px;
+  cursor: default;
 }
 
 .tableindexList li{
@@ -678,4 +684,36 @@ font-size: 11px;
   width: 235px;
   height: 50px;
   margin-right: 5px;
+}
+
+#columnInputBox {
+  width: 97%;
+  border: none;
+  outline: none;
+  margin: 0px;
+  _font-size: 13px;
+}
+.column_search_result {
+  position: absolute;
+  background: #f0f0f0;
+  border: 1px solid #ccc;
+  padding: 1px;
+  display: none;
+  z-index: 1001;
+  display: none;
+  max-height: 100px;
+  overflow-y:auto;
+}
+.column_search_result_item {
+  padding: 5px;
+  cursor: pointer;
+  font-size: 13px;
+  max-width: 150px;
+  overflow: hidden; 
+  text-overflow: ellipsis;
+  white-space: nowrap; 
+  font-size: 11px;
+}
+.column_search_result_item:hover, .column_search_result_item.selected  {
+  background-color: gray;
 }
