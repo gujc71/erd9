@@ -24,6 +24,10 @@ svg {
   font-size: 11px;
 }
 
+svg g, svg text, svg path{
+  cursor: pointer;
+}
+
 text {
   cursor: default;
   fill: black;
@@ -263,10 +267,10 @@ text {
   left: 559px;
 }
 
-.otherLink {
-  margin-left: 10px;
-  text-decoration: none;
+.width150 {
+  width: 150px;
 }
+
 /* -------------------------- */
 .erd9Dialog-grid {
 	font-size: 11px;
