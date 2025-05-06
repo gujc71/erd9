@@ -4,7 +4,7 @@
     "er17064443584069938": {
       "x1": 1161,
       "y1": 631,
-      "x2": 1322.71044921875,
+      "x2": 1323,
       "y2": 766,
       "data": {
         "logicalName": "ACTOR",
@@ -54,7 +54,7 @@
     "er1706444358412849": {
       "x1": 404.71044921875,
       "y1": 43,
-      "x2": 577.23291015625,
+      "x2": 577.71044921875,
       "y2": 218,
       "data": {
         "logicalName": "ADDRESS",
@@ -136,7 +136,7 @@
     "er17064443584193318": {
       "x1": 1672.23291015625,
       "y1": 676,
-      "x2": 1831.6474609375,
+      "x2": 1831.23291015625,
       "y2": 811,
       "data": {
         "logicalName": "CATEGORY",
@@ -173,7 +173,7 @@
     "er17064443584255706": {
       "x1": 78.6474609375,
       "y1": 148,
-      "x2": 246.63330078125,
+      "x2": 246.6474609375,
       "y2": 283,
       "data": {
         "logicalName": "CITY",
@@ -225,7 +225,7 @@
     "er17064443584315134": {
       "x1": 57.06201171875,
       "y1": 376,
-      "x2": 216.4765625,
+      "x2": 216.06201171875,
       "y2": 511,
       "data": {
         "logicalName": "COUNTRY",
@@ -262,7 +262,7 @@
     "er17064443584378242": {
       "x1": 710.4765625,
       "y1": 33,
-      "x2": 877.45263671875,
+      "x2": 877.4765625,
       "y2": 228,
       "data": {
         "logicalName": "CUSTOMER",
@@ -359,10 +359,10 @@
       }
     },
     "er17064443584429493": {
-      "x1": 1310.18701171875,
-      "y1": 16,
-      "x2": 1574.06201171875,
-      "y2": 291,
+      "x1": 1301.18701171875,
+      "y1": 57,
+      "x2": 1565.18701171875,
+      "y2": 332,
       "data": {
         "logicalName": "FILM",
         "physicalName": "FILM",
@@ -493,7 +493,7 @@
     "er17064443584493827": {
       "x1": 1178.06201171875,
       "y1": 379,
-      "x2": 1337.4765625,
+      "x2": 1337.06201171875,
       "y2": 534,
       "data": {
         "logicalName": "FILM_ACTOR",
@@ -539,7 +539,7 @@
     "er1706444358456837": {
       "x1": 1663.4765625,
       "y1": 367,
-      "x2": 1826.7734375,
+      "x2": 1826.4765625,
       "y2": 522,
       "data": {
         "logicalName": "FILM_CATEGORY",
@@ -577,10 +577,10 @@
       }
     },
     "er17064443584627791": {
-      "x1": 1682.89111328125,
-      "y1": 163,
-      "x2": 1809.99462890625,
-      "y2": 298,
+      "x1": 1666.89111328125,
+      "y1": 82,
+      "x2": 1805.89111328125,
+      "y2": 217,
       "data": {
         "logicalName": "FILM_TEXT",
         "physicalName": "FILM_TEXT",
@@ -590,7 +590,9 @@
             "isPK": true,
             "notNull": true,
             "column": "FILM_ID",
-            "dataType": "SMALLINT"
+            "dataType": "SMALLINT",
+            "parent": "FILM",
+            "parentID": "f17064443582878595"
           }
         ],
         "fields": [
@@ -620,7 +622,7 @@
     "er17064443584691446": {
       "x1": 1050.99462890625,
       "y1": 97,
-      "x2": 1212.6640625,
+      "x2": 1212.99462890625,
       "y2": 232,
       "data": {
         "logicalName": "INVENTORY",
@@ -678,7 +680,7 @@
     "er17064443584755581": {
       "x1": 1411.6640625,
       "y1": 423,
-      "x2": 1571.07861328125,
+      "x2": 1570.6640625,
       "y2": 558,
       "data": {
         "logicalName": "LANGUAGE",
@@ -715,7 +717,7 @@
     "er17064443584819054": {
       "x1": 803.07861328125,
       "y1": 594,
-      "x2": 979.62060546875,
+      "x2": 980.07861328125,
       "y2": 749,
       "data": {
         "logicalName": "PAYMENT",
@@ -797,7 +799,7 @@
     "er17064443584881895": {
       "x1": 953,
       "y1": 376,
-      "x2": 1139.10791015625,
+      "x2": 1139,
       "y2": 531,
       "data": {
         "logicalName": "RENTAL",
@@ -883,7 +885,7 @@
     "er17064443584946266": {
       "x1": 294.66943359375,
       "y1": 447,
-      "x2": 461.6455078125,
+      "x2": 461.66943359375,
       "y2": 682,
       "data": {
         "logicalName": "STAFF",
@@ -994,7 +996,7 @@
     "er17064443585003202": {
       "x1": 554.3798828125,
       "y1": 299,
-      "x2": 728.27392578125,
+      "x2": 728.3798828125,
       "y2": 434,
       "data": {
         "logicalName": "STORE",
@@ -1049,121 +1051,169 @@
       "id": "FK_ADDRESS_CITY",
       "parent": "er17064443584255706",
       "child": "er1706444358412849",
-      "relationType": "ak"
+      "relationType": "ak",
+      "relationCard": "many",
+      "relationSelect": "mm"
     },
     {
       "id": "FK_CITY_COUNTRY",
       "parent": "er17064443584315134",
       "child": "er17064443584255706",
-      "relationType": "ak"
+      "relationType": "ak",
+      "relationCard": "many",
+      "relationSelect": "mm"
     },
     {
       "id": "FK_CUSTOMER_ADDRESS",
       "parent": "er1706444358412849",
       "child": "er17064443584378242",
-      "relationType": "ak"
+      "relationType": "ak",
+      "relationCard": "many",
+      "relationSelect": "mm"
     },
     {
       "id": "FK_CUSTOMER_STORE",
       "parent": "er17064443585003202",
       "child": "er17064443584378242",
-      "relationType": "ak"
+      "relationType": "ak",
+      "relationCard": "many",
+      "relationSelect": "mm"
     },
     {
       "id": "FK_FILM_LANGUAGE",
       "parent": "er17064443584755581",
       "child": "er17064443584429493",
-      "relationType": "ak"
+      "relationType": "ak",
+      "relationCard": "many",
+      "relationSelect": "mm"
     },
     {
       "id": "FK_FILM_ACTOR_ACTOR",
       "parent": "er17064443584069938",
       "child": "er17064443584493827",
-      "relationType": "pk"
+      "relationType": "pk",
+      "relationCard": "many",
+      "relationSelect": "mm"
     },
     {
       "id": "FK_FILM_ACTOR_FILM",
       "parent": "er17064443584429493",
       "child": "er17064443584493827",
-      "relationType": "pk"
+      "relationType": "pk",
+      "relationCard": "many",
+      "relationSelect": "mm"
     },
     {
       "id": "FK_FILM_CATEGORY_FILM",
       "parent": "er17064443584429493",
       "child": "er1706444358456837",
-      "relationType": "pk"
+      "relationType": "pk",
+      "relationCard": "many",
+      "relationSelect": "mm"
     },
     {
       "id": "FK_FILM_CATEGORY_CATEGORY",
       "parent": "er17064443584193318",
       "child": "er1706444358456837",
-      "relationType": "pk"
+      "relationType": "pk",
+      "relationCard": "many",
+      "relationSelect": "mm"
     },
     {
       "id": "FK_INVENTORY_STORE",
       "parent": "er17064443585003202",
       "child": "er17064443584691446",
-      "relationType": "ak"
+      "relationType": "ak",
+      "relationCard": "many",
+      "relationSelect": "mm"
     },
     {
       "id": "FK_INVENTORY_FILM",
       "parent": "er17064443584429493",
       "child": "er17064443584691446",
-      "relationType": "ak"
+      "relationType": "ak",
+      "relationCard": "many",
+      "relationSelect": "mm"
     },
     {
       "id": "FK_PAYMENT_RENTAL",
       "parent": "er17064443584881895",
       "child": "er17064443584819054",
-      "relationType": "ak"
+      "relationType": "ak",
+      "relationCard": "many",
+      "relationSelect": "mm"
     },
     {
       "id": "FK_PAYMENT_CUSTOMER",
       "parent": "er17064443584378242",
       "child": "er17064443584819054",
-      "relationType": "ak"
+      "relationType": "ak",
+      "relationCard": "many",
+      "relationSelect": "mm"
     },
     {
       "id": "FK_PAYMENT_STAFF",
       "parent": "er17064443584946266",
       "child": "er17064443584819054",
-      "relationType": "ak"
+      "relationType": "ak",
+      "relationCard": "many",
+      "relationSelect": "mm"
     },
     {
       "id": "FK_RENTAL_STAFF",
       "parent": "er17064443584946266",
       "child": "er17064443584881895",
-      "relationType": "ak"
+      "relationType": "ak",
+      "relationCard": "many",
+      "relationSelect": "mm"
     },
     {
       "id": "FK_RENTAL_INVENTORY",
       "parent": "er17064443584691446",
       "child": "er17064443584881895",
-      "relationType": "ak"
+      "relationType": "ak",
+      "relationCard": "many",
+      "relationSelect": "mm"
     },
     {
       "id": "FK_RENTAL_CUSTOMER",
       "parent": "er17064443584378242",
       "child": "er17064443584881895",
-      "relationType": "ak"
+      "relationType": "ak",
+      "relationCard": "many",
+      "relationSelect": "mm"
     },
     {
       "id": "FK_STAFF_STORE",
       "parent": "er17064443585003202",
       "child": "er17064443584946266",
-      "relationType": "ak"
+      "relationType": "ak",
+      "relationCard": "many",
+      "relationSelect": "mm"
     },
     {
       "id": "FK_STAFF_ADDRESS",
       "parent": "er1706444358412849",
       "child": "er17064443584946266",
-      "relationType": "ak"
+      "relationType": "ak",
+      "relationCard": "many",
+      "relationSelect": "mm"
     },
     {
       "id": "FK_STORE_ADDRESS",
       "parent": "er1706444358412849",
       "child": "er17064443585003202",
-      "relationType": "ak"
+      "relationType": "ak",
+      "relationCard": "many",
+      "relationSelect": "mm"
+    },
+    {
+      "id": "r17465364281425093",
+      "parent": "er17064443584429493",
+      "child": "er17064443584627791",
+      "relationType": "pk",
+      "relationCard": "many",
+      "relationSelect": "mm"
     }
   ],
   "textData": [
