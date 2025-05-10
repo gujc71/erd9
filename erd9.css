@@ -690,13 +690,15 @@ font-size: 11px;
   margin-right: 5px;
 }
 
-#columnInputBox {
-  width: 97%;
+.columnInputBox {
+  display: none;
+  width: 90%;
   border: none;
-  outline: none;
-  margin: 0px;
-  _font-size: 13px;
+  outline: none; 
+  font-size: inherit;
+  background-color: inherit;
 }
+
 .column_search_result {
   position: absolute;
   background: #f0f0f0;
