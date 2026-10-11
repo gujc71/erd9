@@ -1,26 +1,17 @@
 <!DOCTYPE html>
 <html>
 <head>
+  <meta http-equiv="Content-Security-Policy" content="default-src &#39;self&#39;; script-src &#39;self&#39;; style-src &#39;self&#39; &#39;unsafe-inline&#39;; img-src &#39;self&#39; data: blob:; connect-src &#39;self&#39; https://gujc71.github.io https://api.openai.com https://api.anthropic.com https://generativelanguage.googleapis.com; object-src &#39;none&#39;; base-uri &#39;self&#39;; form-action &#39;self&#39;">
+
 	<meta charset="UTF-8">
-	<link rel="shortcut icon" href="images/favicon.ico">
-	<link rel="icon" type="image/png" sizes="32x32" href="images/favicon-32x32.png">
-	<link rel="icon" type="image/png" sizes="16x16" href="images/favicon-16x16.png">
-
-	<link rel="stylesheet" type="text/css" href="erd9.css">
-	<script src="https://d3js.org/d3.v7.min.js"></script>
-	<script src="https://cdnjs.cloudflare.com/ajax/libs/showdown/2.1.0/showdown.min.js" integrity="sha512-LhccdVNGe2QMEfI3x4DVV3ckMRe36TfydKss6mJpdHjNFiV07dFpS2xzeZedptKZrwxfICJpez09iNioiSZ3hA==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>	
-	<script src="erd9.min.js"></script>
-	<title>ERD9 - Best Databse Modeling Tool</title>
-
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-7LYLLB4FBR"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
-
-  gtag('config', 'G-7LYLLB4FBR');
-</script>
-	
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="icon" href="./assets/favicon-DmDQJfUZ.svg" type="image/svg+xml">
+	<title>ERD9 - Best Database Modeling Tool</title>
+  <script type="module" crossorigin src="./assets/index-CEcEC6ZD.js"></script>
+  <link rel="modulepreload" crossorigin href="./assets/rolldown-runtime-C-Z9Ktc0.js">
+  <link rel="modulepreload" crossorigin href="./assets/preload-helper-CGvJkQPP.js">
+  <link rel="modulepreload" crossorigin href="./assets/pageDialog-BPKL-zRK.js">
+  <link rel="stylesheet" crossorigin href="./assets/index-CBJfbchf.css">
 </head>
 <body style="stroke-width: 0px; background-color:white">
 	<div class="toolbar">
@@ -43,17 +34,20 @@
 						<a id="openSamples">Open Samples</a>
 						<a id="openFile" title="Open a saved file in the current web browser">Open</a>
 						<a id="saveFile" title="stored in the current web browser">Save</a>
+						<a id="fileHistory" title="versions kept each time you save">History</a>
 						<a id="printFile" title="print or download as Image">Export Image & Print</a>
 						<a id="exportFile" title="download to your PC">Export to Json</a>
 						<a id="importFile" title="upload from your PC">Import from Json</a>
 					</div>
 				</div>
-
-				<button id="arrowBtn" class="toggle-diagram active" style="margin-left:30px;" title="Select"><img src="images/svg/arrow.svg" alt="Select" width="15" height="15"></button>
-				<button id="textBtn" class="toggle-diagram" title="Text"> <img src="images/svg/text.svg" alt="Text" width="15" height="15"></button>
-				<button id="entityBtn" class="toggle-diagram" title="Entity"> <img src="images/svg/entity.svg" alt="Entity" width="15" height="15"></button>
-				<button id="relationPKBtn" class="toggle-diagram" title="Identifying relationship"> <img src="images/svg/pk.svg" alt="Identifying relationship" width="15" height="15"></button>
-				<button id="relationAKBtn" class="toggle-diagram" title="Non-Identifying relationship"> <img src="images/svg/ak.svg" alt="Non-Identifying relationship" width="15" height="15"></button>
+				
+				<button id="arrowBtn" class="toggle-diagram active" style="margin-left:30px;" title="Select"><img src="data:image/svg+xml,%3csvg%20fill='%23000000'%20width='24px'%20height='24px'%20viewBox='0%200%2024%2024'%20xmlns='http://www.w3.org/2000/svg'%3e%3cg%20id='SVGRepo_bgCarrier'%20stroke-width='0'%3e%3c/g%3e%3cg%20id='SVGRepo_tracerCarrier'%20stroke-linecap='round'%20stroke-linejoin='round'%3e%3c/g%3e%3cg%20id='SVGRepo_iconCarrier'%3e%3cpath%20d='M20.978%2013.21a1%201%200%200%200-.396-1.024l-14-10a.999.999%200%200%200-1.575.931l2%2017a1%201%200%200%200%201.767.516l3.612-4.416%203.377%205.46%201.701-1.052-3.357-5.428%206.089-1.218a.995.995%200%200%200%20.782-.769zm-8.674.31a1%201%200%200%200-.578.347l-3.008%203.677L7.257%205.127l10.283%207.345-5.236%201.048z'/%3e%3c/g%3e%3c/svg%3e" alt="Select" width="15" height="15"></button>
+				<button id="textBtn" class="toggle-diagram" title="Text"> <img src="data:image/svg+xml,%3csvg%20width='64px'%20height='64px'%20viewBox='0%200%2024%2024'%20fill='none'%20xmlns='http://www.w3.org/2000/svg'%3e%3cg%20id='SVGRepo_bgCarrier'%20stroke-width='0'%3e%3c/g%3e%3cg%20id='SVGRepo_tracerCarrier'%20stroke-linecap='round'%20stroke-linejoin='round'%3e%3c/g%3e%3cg%20id='SVGRepo_iconCarrier'%3e%3cpath%20d='M12%203V21M9%2021H15M19%206V3H5V6'%20stroke='%23000000'%20stroke-width='2'%20stroke-linecap='round'%20stroke-linejoin='round'%3e%3c/path%3e%3c/g%3e%3c/svg%3e" alt="Text" width="15" height="15"></button>
+				<button id="entityBtn" class="toggle-diagram" title="Entity"> <img src="data:image/svg+xml,%3csvg%20width='24'%20height='24'%20viewBox='0%200%2024%2024'%20fill='none'%20xmlns='http://www.w3.org/2000/svg'%3e%3cg%20id='SVGRepo_bgCarrier'%20stroke-width='0'%3e%3c/g%3e%3cg%20id='SVGRepo_tracerCarrier'%20stroke-linecap='round'%20stroke-linejoin='round'%3e%3c/g%3e%3cg%20id='SVGRepo_iconCarrier'%3e%3cpath%20d='M3%209L21%209M6.2%2020H17.8C18.9201%2020%2019.4802%2020%2019.908%2019.782C20.2843%2019.5903%2020.5903%2019.2843%2020.782%2018.908C21%2018.4802%2021%2017.9201%2021%2016.8V7.2C21%206.0799%2021%205.51984%2020.782%205.09202C20.5903%204.71569%2020.2843%204.40973%2019.908%204.21799C19.4802%204%2018.9201%204%2017.8%204H6.2C5.0799%204%204.51984%204%204.09202%204.21799C3.71569%204.40973%203.40973%204.71569%203.21799%205.09202C3%205.51984%203%206.07989%203%207.2V16.8C3%2017.9201%203%2018.4802%203.21799%2018.908C3.40973%2019.2843%203.71569%2019.5903%204.09202%2019.782C4.51984%2020%205.07989%2020%206.2%2020Z'%20stroke='%23000000'%20stroke-width='2'%20stroke-linecap='round'%20stroke-linejoin='round'/%3e%3c/g%3e%3c/svg%3e" alt="Entity" width="15" height="15"></button>
+				<button id="relationPKBtn" class="toggle-diagram" title="Identifying relationship"> <img src="data:image/svg+xml,%3csvg%20width='24'%20height='24'%20xmlns='http://www.w3.org/2000/svg'%3e%3cpath%20d='M1%201%20H12%20V23%20H23'%20stroke='black'%20stroke-width='1.5'%20fill='none'%20/%3e%3c/svg%3e" alt="Identifying relationship" width="15" height="15"></button>
+				<button id="relationAKBtn" class="toggle-diagram" title="Non-Identifying relationship"> <img src="data:image/svg+xml,%3csvg%20width='24'%20height='24'%20xmlns='http://www.w3.org/2000/svg'%3e%3cpath%20d='M1%201%20H12%20V23%20H23'%20stroke='black'%20stroke-width='1.5'%20fill='none'%20stroke-dasharray='3%203'%20/%3e%3c/svg%3e" alt="Non-Identifying relationship" width="15" height="15"></button>
+				<button id="relationMNBtn" class="toggle-diagram" title="Many-to-many relationship (creates a mapping table)"> <img src="data:image/svg+xml,%3csvg%20width='24'%20height='24'%20xmlns='http://www.w3.org/2000/svg'%3e%3cpath%20d='M1%2012%20H23%20M1%205%20L7%2012%20L1%2019%20M23%205%20L17%2012%20L23%2019'%20stroke='black'%20stroke-width='1.5'%20fill='none'%20/%3e%3c/svg%3e" alt="Many-to-many relationship" width="15" height="15"></button>
+				<button id="areaBtn" class="toggle-diagram" title="Subject area"> <img src="data:image/svg+xml,%3csvg%20width='24'%20height='24'%20xmlns='http://www.w3.org/2000/svg'%3e%3crect%20x='1.5'%20y='1.5'%20width='21'%20height='21'%20stroke='black'%20stroke-width='1.5'%20stroke-dasharray='4%202'%20fill='%23e8f0fe'%20/%3e%3cpath%20d='M5%207%20H13'%20stroke='black'%20stroke-width='2'%20/%3e%3c/svg%3e" alt="Subject area" width="15" height="15"></button>
 				
 				<button id="logicalBtn" class="toggle-view-mode" style="margin-left:30px"> Logical </button>
 				<button id="physicalBtn" class="toggle-view-mode active"> Physical </button>
@@ -70,26 +64,31 @@
 				<div class="dropdown" style="margin-left:30px">
 					<button id="dbmsDropbtn" class="dropbtn">MariaDB</button>
 					<div class="dropdown-content">
-					<a id="dbms4mariadb">MariaDB</a>
-					<a id="dbms4oracle">ORACLE</a>
-					<a id="dbms4mssql">MS-SQL</a>
+						<a id="dbms4mariadb">MariaDB</a>
+						<a id="dbms4oracle">ORACLE</a>
+						<a id="dbms4mssql">MS-SQL</a>
+						<a id="dbms4postgresql">PostgreSQL</a>
 					</div>
-				</div>		
+				</div>
 				<div class="dropdown" style="margin-left:30px; width: 210px;">
 					<button id="addonsDropbtn" class="dropbtn">Add-ons</button>
 					<div class="dropdown-content">
-						<a id="simpleImportDDL">Simple Import from DDL</a>
+						<a id="simpleImportDDL">Import from DDL</a>
 						<a id="generateDDL">Generate DDL</a>
+						<a id="compareERD">Compare ERD / ALTER Script</a>
 						<a id="tableDescription">Table Description</a>
 						<a id="detectRelationship">Detect Missing Relationship</a>
+						<a id="makeERDwithAI">Make ERD with AI</a>
 						<a id="autoLayout">Auto Layout</a>
+						<a id="viewsSequences">Views &amp; Sequences</a>
 						<a id="dDictionaryMenu">Data Dictionary</a>
+						<a id="columnTemplates">Column Templates</a>
 					</div>
 				</div>					
 			</div>
 		</div>
 	</div>
-	<svg width="3176" height="3372" transform="translate(0, 68) scale(1)"></svg>
+	<svg></svg>
 </body>
 
 </html>
