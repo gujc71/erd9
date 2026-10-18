@@ -1,0 +1,2 @@
+/*! Copyright 2023 Ja-Chul, Gu */
+import{H as e}from"./index-Bh2odjuh.js";function t(t){const o=document.createElement("textarea");o.value=t;const n=e();n.appendChild(o),o.select(),document.execCommand("copy"),n.removeChild(o)}export{t};
