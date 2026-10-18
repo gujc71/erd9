@@ -7,6 +7,17 @@ You define tables (entities) and manage the relationships between them as an ERD
 - Tested in Chrome and Firefox on Windows.
 - No login and no server storage. Documents are stored in your browser (IndexedDB), and you can export them to a JSON file on your PC. Take care when using a shared or public computer.
 
+## User manual
+
+Every feature is described with screenshots in the user manual (AsciiDoc):
+
+- [English](doc/user-manual_en.adoc)
+- [한국어 (Korean)](doc/user-manual_ko.adoc)
+
+## Source Code
+
+The source code is in a different repository [here](https://github.com/gujc71/ERD9-Source/)
+
 ## Main features
 
 Create and edit entities with the mouse.
@@ -17,7 +28,11 @@ Supports MariaDB (MySQL), Oracle, MS-SQL and PostgreSQL. Relationships between e
 
 ![manual2](https://gujc71.github.io/erd9/images/manual_2.gif)
 
-- **Many-to-many**: Draw an M:N relationship with the M:N tool. A mapping table with both primary keys is created and connected with two identifying relationships.
+- **Many-to-many**: Draw an M:N relationship with the M:N tool. An associative (intersection) table with both primary keys is created and connected with two identifying relationships.
+- **Self-referencing relationship**: With a relationship tool, click the same entity twice (for example, an employee's manager). The keys are added as `PARENT_` columns that allow NULL.
+- **Pages**: Use the tabs at the bottom to show part of a large model on its own page. An entity can be on several pages, at a different position on each; `Main` always shows every entity. Click `+` to make a page from the selected entities.
+- **Domains**: Define a data type, default and not null once and use it in the `Domain` column of the Entity dialog. Changing a domain updates every column that uses it.
+- **Data standards**: Standard words (고객 → CUST) and terms (고객번호 → CUST_NO, with a domain). In the Entity dialog, terms are suggested as you type a column name or comment, a comment that is not a term is made into a column name from the words, and `Standardize` renames every column. To start a dictionary from an existing ERD, use `Extract from ERD` in the Terms tab. `Add-ons > Domains & Standards > Check` lists the columns that don't follow the standard and can fix them.
 - **Constraints**: Unique (also composite) indexes and CHECK constraints in the Entity dialog (`Index / Check`), and ON DELETE / ON UPDATE actions and the constraint name in the Relationship dialog. Options a DBMS doesn't support are left as comments in the DDL.
 - **Colors and subject areas**: Give an entity a background color, and group entities with subject areas. Moving an area moves the entities inside it.
 - **Column templates**: Add common columns (created at, created by, ...) to an entity at once.
@@ -33,7 +48,7 @@ Supports MariaDB (MySQL), Oracle, MS-SQL and PostgreSQL. Relationships between e
 - **Detect Missing Relationship**: Finds missing relationships between entities based on column names (and data types).
 - **Auto Layout**: Rearranges entities automatically.
 - **Views & Sequences**: Manages views and sequences of the document. They are included in the generated DDL and the ALTER script.
-- **Data Dictionary**: Reuses column names, comments and data types you have entered before, with autocompletion.
+- **Domains & Standards**: Manages domains and the standard word and term dictionaries (import and export as CSV for Excel), and checks the columns against them.
 - **Column Templates**: Manages the column templates.
 
 `Files > Export Image & Print` downloads the diagram (all or selected entities) as PNG (1x-4x, white or transparent background) or SVG, cropped to the area the entities occupy.
@@ -48,7 +63,17 @@ Requires your own API key for OpenAI (ChatGPT), Anthropic (Claude) or Google (Ge
 - **ERD Review and Feedback**: Get an evaluation of your ERD.
 - **Free Talk**: Ask for anything based on your ERD, for example MyBatis code for Java.
 
-![manual4](https://gujc71.github.io/erd9/images/manual_4.gif)
+## Desktop app files
+
+In the desktop app, `Files > Save` and `Files > Open` use `.erd9` files on your PC instead of the browser storage. An `.erd9` file is the same JSON as `Export to Json`, so the web version can open it with `Import from Json`. `Save As` (Ctrl + Shift + S) saves to another file. A version is still kept on the PC each time you save, so `History` works as in the web version.
+
+## Database (desktop app only)
+
+The desktop app (see [Desktop app](#desktop-app)) has a **Database** menu. It is hidden in the web version, because a web browser cannot connect to a database server directly. Supported: MariaDB/MySQL, PostgreSQL, MS-SQL and Oracle (Oracle needs [Oracle Instant Client](https://www.oracle.com/database/technologies/instant-client.html) on the PC). Connection settings are remembered without the password.
+
+- **Forward Engineering**: Create a database on a database server from the ERD. Generates the script (all or selected entities, optionally dropping existing objects first); review or edit it, then execute it statement by statement with a log.
+- **Reverse Engineering**: Build an ERD from an existing database server: tables, columns, comments, primary keys, relationships, indexes, CHECK constraints, views and sequences. Choose the tables, then add them to the current document or a new one.
+- **Compare and Merge**: Compares the ERD with the database and lists every difference (table, view, sequence). For each one choose ERD → DB (runs an ALTER script on the database), DB → ERD (updates the ERD) or Skip. The script is shown before it runs. Tables and columns are matched by name, so a renamed column appears as dropped and added.
 
 ## Shortcut keys
 
@@ -72,53 +97,10 @@ Done: find entity, zoom, print, multiple selection, undo/redo, missing relations
 
 Planned. These need a web server and login:
 
-- **Forward engineering**: Create a database on a database server from the ERD.
-- **Reverse engineering**: Build an ERD from an existing database server.
 - **Save to server**: Multi-user use, and possibly simultaneous editing later.
 - **Save to GitHub**: Manage work history.
 - **ERD sharing**: Share and discuss an ERD with others.
 - **Code generation**: Generate CRUD code (e.g. Node.js, Python) for selected entities.
-
-## Development
-
-Built with TypeScript and [Vite](https://vite.dev). Requires Node.js 20 or later.
-
-```bash
-npm install            # install dependencies
-
-npm run dev            # dev server (http://localhost:5173), loads test data automatically
-npm run typecheck      # TypeScript type check
-npm test               # unit tests (Vitest)
-npm run build          # type check + production build (dist/)
-npm run build:obf      # build + obfuscation
-npm run preview        # preview dist/ (http://localhost:4173)
-npm run server         # serve dist/ with Express and security headers (http://localhost:3000)
-```
-
-Source layout:
-
-```
-index.html              entry page
-images/                 logo and toolbar icons
-src/
-  main.ts               app start-up and event wiring
-  state.ts              shared application state
-  erdManager.ts         document operations: new/save/load, copy/paste, view modes
-  templates.ts          column templates
-  ai/                   AI providers (OpenAI, Anthropic, Gemini), ERD response schema
-  diagram/              Entity9, Relation9, Text9, Area9 (subject area)
-  core/                 selection, undo/redo, find, auto layout (elkjs), M:N, zoom and pan (viewport)
-  dialogs/              popup dialogs
-  export/               image export, table description (Markdown, HTML, xlsx)
-  sql/                  DDL parser, DDL generator, ERD compare (ALTER script)
-  storage/              IndexedDB, autosave, file validation
-  styles/erd9.css
-tests/                  unit tests
-index.js                Express server for dist/
-scripts/obfuscate.mjs   post-build obfuscation
-```
-
-The JSON file format has a `version` field (currently 2). Files without it (version 1) are still read; when the format changes, raise `ERD_FILE_VERSION` in `src/constants.ts` and convert older files in `src/storage/validateERDFile.ts`.
 
 ## License
 
