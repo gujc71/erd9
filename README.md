@@ -4,6 +4,7 @@ ERD9 is a web-based database modeling tool for designing and managing database s
 You define tables (entities) and manage the relationships between them as an ERD (Entity Relationship Diagram).
 
 - **[Getting started](https://gujc71.github.io/erd9/)**
+- It can be run directly on the website, or you can [download](https://github.com/gujc71/erd9/releases/download/v1.0.0/erd9.exe) and run the Windows executable file.
 - Tested in Chrome and Firefox on Windows.
 - No login and no server storage. Documents are stored in your browser (IndexedDB), and you can export them to a JSON file on your PC. Take care when using a shared or public computer.
 
