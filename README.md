@@ -68,6 +68,8 @@ Requires your own API key for OpenAI (ChatGPT), Anthropic (Claude) or Google (Ge
 
 In the desktop app, `Files > Save` and `Files > Open` use `.erd9` files on your PC instead of the browser storage. An `.erd9` file is the same JSON as `Export to Json`, so the web version can open it with `Import from Json`. `Save As` (Ctrl + Shift + S) saves to another file. A version is still kept on the PC each time you save, so `History` works as in the web version.
 
+[Download](https://github.com/gujc71/erd9/releases)
+
 ## Database (desktop app only)
 
 The desktop app (see [Desktop app](#desktop-app)) has a **Database** menu. It is hidden in the web version, because a web browser cannot connect to a database server directly. Supported: MariaDB/MySQL, PostgreSQL, MS-SQL and Oracle (Oracle needs [Oracle Instant Client](https://www.oracle.com/database/technologies/instant-client.html) on the PC). Connection settings are remembered without the password.
