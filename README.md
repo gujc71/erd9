@@ -12,8 +12,8 @@ You define tables (entities) and manage the relationships between them as an ERD
 
 Every feature is described with screenshots in the user manual (AsciiDoc):
 
-- [English](doc/user-manual_en.adoc)
-- [한국어 (Korean)](doc/user-manual_ko.adoc)
+- [English](https://github.com/gujc71/ERD9-Source/blob/main/doc/user-manual_en.adoc)
+- [한국어 (Korean)](https://github.com/gujc71/ERD9-Source/blob/main/doc/user-manual_ko.adoc)
 
 ## Source Code
 
